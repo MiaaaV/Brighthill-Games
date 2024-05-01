@@ -6,7 +6,9 @@ function Home() {
   return (
     <>
       <Nav />
-      <h1>hello this is home</h1>
+      <div style={{ padding: 1500, backgroundColor: "darkblue" }}>
+        <h1>hello this is home</h1>
+      </div>
       <Footer />
     </>
   )

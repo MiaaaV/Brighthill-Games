@@ -7,11 +7,17 @@ gray = '#272727';
 */
 
 .nav-container {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
+}
+
+.scrolled {
+  background-color: #1f1f1f;
 }
 
 nav {

@@ -6,12 +6,28 @@ import Facebook from "../images/icons/facebook.png";
 import YouTube from "../images/icons/youtube.png";
 import "./styles/Nav.css";
 import "../App.css";
+import { useEffect, useState } from "react";
 
 function Nav() {
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > window.innerHeight * 0.3);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="nav-container">
+      <div className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
         <nav>
           <NavLink to="/">
             <img src={Logo} id="logo" alt="Brighthill Games logo" />
