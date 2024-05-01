@@ -1,0 +1,34 @@
+/*
+primary = '#9A7E11';
+secondary = '#23404D';
+white = '#F3f3f3';
+black = '#1f1f1f';
+gray = '#272727';
+*/
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+nav>ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  font-size: 18px;
+  text-decoration: none;
+}

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Merriweather', sans-serif;
 }
 
 a {
@@ -30,6 +31,11 @@ html {
 #logo {
   width: 161px;
   height: 60px;
+}
+
+a.hover,
+a.active {
+  color: #9A7E11;
 }
 
 /* SOCIAL MEDIA ICONS*/
