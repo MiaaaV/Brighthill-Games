@@ -30,4 +30,9 @@ html {
 #logo {
   width: 161px;
   height: 60px;
-  }
+}
+
+.social-icons {
+  height: 30px;
+  width: 30px;
+}
