@@ -12,6 +12,8 @@ a {
 html {
   scroll-behavior: smooth;
   font-size: 16px; /* normal font size*/
+  background-color: rgb(143, 143, 143);
+  color: #f3f3f3;
 }
 
 ::-webkit-scrollbar {
