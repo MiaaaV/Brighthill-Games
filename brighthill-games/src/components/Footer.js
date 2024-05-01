@@ -14,10 +14,10 @@ function Footer() {
               <p>00100 Helsinki</p>
               <p>Finland</p>
             </div>
-            <div>
+            <div className='footer-copyright'>
               <p>© 2024 Brighthill Games, INC. All rights reserved</p>
             </div>
-            <div>
+            <div className='footer-social-icons'>
               <p>Follow Brighthill Games on</p>
             </div>
           </div>
