@@ -32,7 +32,16 @@ html {
   height: 60px;
 }
 
+/* SOCIAL MEDIA ICONS*/
+
 .social-icons {
   height: 30px;
   width: 30px;
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
 }
