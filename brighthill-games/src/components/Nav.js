@@ -27,7 +27,7 @@ function Nav() {
 
   return (
     <>
-      <div className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
+      <header className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
         <nav>
           <NavLink to="/">
             <img src={Logo} id="logo" alt="Brighthill Games logo" />
@@ -64,7 +64,7 @@ function Nav() {
           </li>
         </ul>
 
-      </div>
+      </header>
     </>
   )
 }
