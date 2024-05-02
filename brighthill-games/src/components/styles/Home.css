@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Desgaste";
+  src: url("../../assets/fonts/vtks\ desgaste.ttf") format("truetype");
+}
+
+.hero {
+  background-image: url("../../images/backgrounds/EoD-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 630px;
+}
+
+.hero-content p {
+  text-align: center;
+}
+
+#hero-h1 {
+  font-family: "Desgaste", sans-serif;
+  font-size: 64px;
+  color: #f3f3f3;
+}
+
+.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  font-size: 20px;
+}
+
+#arrow-btn {
+  padding: 10px;
+  font-size: 50px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8vh;
+  color: #f3f3f3;
+  background-color: #ffffff23;
+  animation: jump 2s infinite;
+}
+
+#arrow-btn:hover {
+  cursor: pointer;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
