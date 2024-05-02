@@ -51,7 +51,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
   color: #f3f3f3;
   background-color: #ffffff23;
   animation: jump 2s infinite;
