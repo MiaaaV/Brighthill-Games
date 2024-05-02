@@ -4,6 +4,9 @@ import "../components/styles/Home.css";
 import "../App.css";
 import "../assets/fonts/fonts.css"
 import { FaAngleDown } from "react-icons/fa";
+import News1 from '../images/news/news1.png'
+import News2 from '../images/news/news2.png'
+import News3 from '../images/news/news3.png'
 
 function Home() {
 
@@ -24,6 +27,37 @@ function Home() {
         </div>
 
         <FaAngleDown id="arrow-btn" />
+      </div>
+
+      <div className="recent">
+        <h2 style={{ textTransform: "uppercase" }}>Recent news and articles</h2>
+
+        <div className="recent-content">
+          <div>
+            <img className="recent-img" src={News1} alt="News content" />
+
+            <div className="recent-text-box">
+              <h3 style={{ textTransform: "uppercase" }}>EoD - behind the scenes</h3>
+              <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div>
+            <img className="recent-img" src={News2} alt="News content" />
+            <div className="recent-text-box">
+              <h3 style={{ textTransform: "uppercase" }}>Making lady Veronica</h3>
+              <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div>
+            <img className="recent-img" src={News3} alt="News content" />
+            <div className="recent-text-box">
+              <h3 style={{ textTransform: "uppercase" }}>2024 awards nominee</h3>
+              <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer />

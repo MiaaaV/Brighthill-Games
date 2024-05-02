@@ -3,6 +3,8 @@
   src: url("../../assets/fonts/vtks\ desgaste.ttf") format("truetype");
 }
 
+/* HERO */
+
 .hero {
   background-image: url("../../images/backgrounds/EoD-banner.png");
   background-repeat: no-repeat;
@@ -71,4 +73,41 @@
   100% {
     transform: translateY(0) translateX(-50%);
   }
+}
+
+/* RECENT */
+
+.recent {
+  background-color: #000001;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 50px;
+  padding: 10vh 20vw;
+}
+
+.recent-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.recent-content div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.recent-img {
+  width: 330px;
+  height: 270px;
+  border-radius: 2px;
+}
+
+.recent-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 1vw;
+  gap: 20px;
 }
