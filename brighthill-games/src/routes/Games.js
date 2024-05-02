@@ -39,10 +39,8 @@ function Games() {
             </a>
           </div>
 
-          <div className="character-image">
-            
-              <img src={Character} id="character" alt="Character" className="character"/>
-            
+          <div className="character-image">            
+              <img src={Character} id="character" alt="Character" className="character"/>            
           </div>
 
         </div>

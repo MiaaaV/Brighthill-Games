@@ -3,7 +3,7 @@
     display: flex;
     gap: 100px;
     align-items: center;
-    padding: 0px 270px;
+    padding: 15vh 30vh 0 30vh;
     background-image: url('../../images/backgrounds/Bannerbg.jpg');
     background-size: cover;
     background-position: center;
@@ -56,8 +56,10 @@
     color: #8C8C8C;
     cursor: pointer;
 }
+.character-image {
+    display: flex;
+}
 .character {
-    margin-top: 100px;
     height: auto;
     width: 600px;
 }
