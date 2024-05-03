@@ -21,11 +21,11 @@ function Home() {
       <Nav />
 
       <div className="main-container">
-        <div className="hero">
-          <div className="hero-content">
+        <div className="hero flex-col">
+          <div className="hero-content flex-col">
             <h1 id="hero-h1">The <span style={{ color: "#796940", fontFamily: "Desgaste" }}>past</span> never sleeps</h1>
 
-            <div className="hero-text-box">
+            <div className="hero-text-box flex-col">
               <p>Uncover the asylum's chilling past, solve perplexing puzzles, and confront the echoes of lost souls.</p>
               <p>Will you unravel the secrets that have remained hidden for decades, or will you become another victim of Brighthill’s haunting legacy?</p>
             </div>
@@ -36,30 +36,30 @@ function Home() {
           <FaAngleDown id="arrow-btn" />
         </div>
 
-        <div className="recent">
+        <div className="recent grid-1-2">
           <h2 className="uppercase heading-2">Recent news and articles</h2>
 
-          <div className="recent-content">
-            <div>
+          <div className="recent-content grid-3-1">
+            <div className="flex-col">
               <img className="recent-img" src={News1} alt="News content" />
 
-              <div className="recent-text-box">
+              <div className="recent-text-box flex-col">
                 <h3 className="uppercase">EoD - behind the scenes</h3>
                 <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
 
-            <div>
+            <div className="flex-col">
               <img className="recent-img" src={News2} alt="News content" />
-              <div className="recent-text-box">
+              <div className="recent-text-box flex-col">
                 <h3 className="uppercase">Making lady Veronica</h3>
                 <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
 
-            <div>
+            <div className="flex-col">
               <img className="recent-img" src={News3} alt="News content" />
-              <div className="recent-text-box">
+              <div className="recent-text-box flex-col">
                 <h3 className="uppercase">2024 awards nominee</h3>
                 <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
@@ -67,10 +67,10 @@ function Home() {
           </div>
         </div>
 
-        <div className="fp-games">
+        <div className="fp-games grid-1-2">
           <h2 className="uppercase heading-2">Our games</h2>
 
-          <div className="fp-games-content">
+          <div className="fp-games-content grid-2-1">
             <img className="fp-game" src={Banner1} alt="Games content" />
             <img className="fp-game" src={Banner2} alt="Games content" />
             <img className="fp-game" src={Banner3} alt="Games content" />
@@ -78,21 +78,21 @@ function Home() {
           </div>
         </div>
 
-        <div className="fp-recruit">
+        <div className="fp-recruit grid-2-1">
 
-          <div className="fp-div">
+          <div className="fp-div flex-col">
             <h3 className="uppercase heading-2">Life in Brighthill Games</h3>
 
             <p>Join the team of Brighthill and help us create games that last for generations</p>
 
             <div className="fp-positions">
-              <div>
-                <h1>8</h1>
+              <div className="flex-col">
+                <h1 className="heading-1">8</h1>
                 <p>open positions</p>
               </div>
 
-              <div>
-                <h1>2</h1>
+              <div className="flex-col">
+                <h1 className="heading-1">2</h1>
                 <p>offices in Finland</p>
               </div>
             </div>

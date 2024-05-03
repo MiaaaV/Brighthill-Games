@@ -15,8 +15,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -24,8 +22,6 @@
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 50px;
   width: 630px;
@@ -42,8 +38,6 @@
 }
 
 .hero-text-box {
-  display: flex;
-  flex-direction: column;
   padding: 30px;
   gap: 30px;
   font-size: 20px;
@@ -84,21 +78,15 @@
 
 .recent {
   background-color: #000001;
-  display: grid;
-  grid-template-columns: repeat(1, 2fr);
   gap: 50px;
   padding: 10vh 10vw;
 }
 
 .recent-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
 }
 
 .recent-content div{
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 10px;
 }
@@ -110,8 +98,6 @@
 }
 
 .recent-text-box {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 1vh 2vw;
   gap: 20px;
@@ -120,8 +106,6 @@
 /* GAMES */
 
 .fp-games {
-  display: grid;
-  grid-template-columns: repeat(1, 2fr);
   gap: 3vw;
   padding: 10vh 20vw;
   background-image: url('../../images/backgrounds/fp-games-bg.png');
@@ -132,8 +116,6 @@
 }
 
 .fp-games-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 5vh;
 }
 
@@ -147,15 +129,11 @@
 /* RECRUIT */
 
 .fp-recruit {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   background-color: #23404D;
   align-items: center;
 }
 
 .fp-div {
-  display: flex;
-  flex-direction: column;
   margin-left: 200px;
   gap: 30px;
   padding: 0 150px;
@@ -171,6 +149,7 @@
   background-color: #f3f3f3;
   padding: 30px;
   border-radius: 10px;
+  gap: 10px;
 }
 
 .fp-positions h1,
