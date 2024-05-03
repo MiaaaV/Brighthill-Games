@@ -87,17 +87,19 @@ function Home() {
 
             <div className="fp-positions">
               <div className="flex-col">
-                <h1 className="heading-1">8</h1>
-                <p>open positions</p>
+                <h1 className="heading-1 bold">8</h1>
+                <p className="font-2">open positions</p>
               </div>
 
               <div className="flex-col">
-                <h1 className="heading-1">2</h1>
-                <p>offices in Finland</p>
+                <h1 className="heading-1 bold">2</h1>
+                <p className="font-2">offices in Finland</p>
               </div>
             </div>
 
-            <button id="btn">explore positions</button>
+            <div>
+              <button id="btn">explore positions</button>
+            </div>
           </div>
 
           <img className="fp-recruit-img" src={Recruit} alt="Recruit banner" />
