@@ -1,5 +1,7 @@
 
-.content {
+/*------ HERO CSS ------ */
+
+.games-hero-content {
     display: flex;
     gap: 100px;
     align-items: center;
@@ -63,4 +65,86 @@
     height: auto;
     width: 600px;
 }
+
+/*------ ALL GAMES CSS ------*/
+
+.all-games-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.all-games-bg {
+    background-image: url('../../images/backgrounds/AllgamesBGV2.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    z-index: -1;
+}
+.all-games-title-container {
+    align-items: center;
+    padding: 4vh 2vh 2vh 2vh;
+}
+.all-games-title {
+    text-align: center;
+}
+.all-games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px;
+    padding: 5vh 30vh 10vh 30vh;
+    justify-content: center;
+}
+.all-games-image-container {
+    position: relative;
+    display: inline-block;
+}
+.all-games-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.all-games-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.4s ease; /* Smooth transition for the opacity property */
+}
+.all-games-image-overlay-text {
+    color: #f3f3f3;
+    font-size: 1vw;
+    font-weight: 400;
+    margin-top: 15vh;
+    text-decoration: underline;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.4s ease;
+} 
+.all-games-image-container:hover .all-games-image-overlay {
+    opacity: 1;
+}
+.all-games-image-container:hover .all-games-image-overlay-text {
+    opacity: 0.9;
+    transform: translateY(100%);
+}
   
+
+/*------ AD ------*/
+
+.ad {
+    align-items: center;
+    margin-bottom: -4px;
+}
+.ad-image {
+    width: 100%;
+    height: auto;
+}

@@ -4,13 +4,20 @@ import '../components/styles/Games.css';
 import '../App.css';
 import Star from '../images/icons/star.png';
 import Character from '../images/games/char2.png';
+import EOD from '../images/games/EOD.png';
+import CD from '../images/games/Celestial Descent.png';
+import Extopia from '../images/games/Extopia.png';
+import Solaris from '../images/games/Solaris Surge.png';
+import DoA from '../images/games/DoA.png';
+import PoT from '../images/games/PoT.png';
+import ADS from '../images/games/ADS.png';
 
 function Games() {
 
   return (
     <>
       <Nav />
-        <div className="content">
+        <div className="games-hero-content">
           <div className="textstuff">
 
             <ul className="star-icon-list">
@@ -45,14 +52,70 @@ function Games() {
 
         </div>
 
-        <div>
-          <h1>hello this is games</h1>
+        <div className="all-games-container">
 
+          <div className="all-games-bg"></div>  {/* To be able to give background a blur without blurring other content */}
+
+          <div className="all-games-title-container">
+            <h1 className="all-games-title">ALL GAMES</h1>
+          </div>
+
+          <div className="all-games-grid">
+
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={EOD} alt="Echoes of Desolation icon" className="all-games-image"/>
+            </div>
+
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={CD} alt="Celestial Descent icon" className="all-games-image"/>
+            </div>
+
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={Extopia} alt="Extopia icon" className="all-games-image"/>
+            </div>
+
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={Solaris} alt="Solaris Surge icon" className="all-games-image"/>
+            </div>
+
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={DoA} alt="Dawn of Arcanum icon" className="all-games-image"/>
+            </div>
+
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={PoT} alt="Planet of Tomorrow icon" className="all-games-image"/>
+            </div>
+
+          {/*
+            <img src={CD} alt="Celestial Descent icon" className="all-games-image"/>
+            <img src={Extopia} alt="Extopia icon" className="all-games-image"/>
+            <img src={Solaris} alt="Solaris Surge icon" className="all-games-image"/>
+            <img src={DoA} alt="Dawn of Arcanum icon" className="all-games-image"/>
+            <img src={PoT} alt="Planet of Tomorrow icon" className="all-games-image"/>
+          */}
+          </div>
         </div>
 
-        <div>
-          <h1>hello this is games</h1>
-
+        <div className="ad">
+          <img src={ADS} alt="AD banner" className="ad-image"/>
         </div>
       <Footer />
     </>
