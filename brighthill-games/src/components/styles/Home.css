@@ -111,3 +111,29 @@
   padding: 1vh 1vw;
   gap: 20px;
 }
+
+/* GAMES */
+
+.fp-games {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 3vw;
+  padding: 10vh 20vw;
+  background-image: url('../../images/backgrounds/fp-games-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.fp-games-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5vh;
+}
+
+.fp-game {
+  width: 500px;
+  box-shadow: 2px 2px 40px 10px rgba(243, 243, 243, 0.25);
+  border-radius: 2px;
+}
