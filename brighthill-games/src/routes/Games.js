@@ -6,7 +6,7 @@ import Star from '../images/icons/star.png';
 import Character from '../images/games/char2.png';
 import EOD from '../images/games/EOD.png';
 import CD from '../images/games/Celestial Descent.png';
-import Extopia from '../images/games/Extopia.png';
+import Extopia from '../images/games/ExtopiaThumb.png';
 import Solaris from '../images/games/Solaris Surge.png';
 import DoA from '../images/games/DoA.png';
 import PoT from '../images/games/PoT.png';
