@@ -1,0 +1,7 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.heading-2 {
+  font-size: 1.75rem; /*28 px*/
+}

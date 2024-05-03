@@ -3,6 +3,11 @@
   src: url("../../assets/fonts/vtks\ desgaste.ttf") format("truetype");
 }
 
+.main-container {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
 /* HERO */
 
 .hero {
@@ -32,7 +37,7 @@
 
 #hero-h1 {
   font-family: "Desgaste", sans-serif;
-  font-size: 64px;
+  font-size: 4rem; /* 64px */
   color: #f3f3f3;
 }
 
@@ -82,13 +87,13 @@
   display: grid;
   grid-template-columns: repeat(1, 2fr);
   gap: 50px;
-  padding: 10vh 20vw;
+  padding: 10vh 10vw;
 }
 
 .recent-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .recent-content div{
@@ -108,7 +113,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1vh 1vw;
+  padding: 1vh 2vw;
   gap: 20px;
 }
 
@@ -133,7 +138,47 @@
 }
 
 .fp-game {
-  width: 500px;
+  width: 100%;
+  height: 100%;
   box-shadow: 2px 2px 40px 10px rgba(243, 243, 243, 0.25);
   border-radius: 2px;
+}
+
+/* RECRUIT */
+
+.fp-recruit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #23404D;
+  align-items: center;
+}
+
+.fp-div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+  gap: 30px;
+  padding: 0 150px;
+  text-align: center;
+}
+
+.fp-positions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fp-positions div {
+  background-color: #f3f3f3;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.fp-positions h1,
+.fp-positions p {
+  color: black;
+  text-align: center;
+}
+
+.fp-recruit-img {
+width: 100%;
 }
