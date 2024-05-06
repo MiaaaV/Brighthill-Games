@@ -10,7 +10,7 @@ import News2 from '../images/news/news2.png';
 import News3 from '../images/news/news3.png';
 import Banner1 from '../images/games/solaris-surge.png';
 import Banner2 from '../images/games/Extopia.png';
-import Banner3 from '../images/games/celestial-descent-aod.png';
+import Banner3 from '../images/games/CD/celestial-descent-aod.png';
 import Banner4 from '../images/games/dawn-of-arcanum.png';
 import Recruit from '../images/backgrounds/fp-recruit.png';
 

@@ -1,0 +1,122 @@
+.main-game-div {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-game-div::before {
+  position: absolute;
+  filter: blur(20px);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  margin-top: 15vh;
+  row-gap: 50px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+#game-name {
+  max-width: 60%;
+}
+
+.grid-text {
+  text-align: justify;
+  line-height: 1.5;
+  width: 80%;
+}
+
+.grid-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-img {
+  width: 100%;
+}
+
+.filler-img {
+  width: 50%;
+}
+
+.accordion-btn {
+  background-color: #9A7E11;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.accordion-btn div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#arr-icon {
+  rotate: 180deg;
+  width: 20px;
+  margin-right: 20px;
+}
+
+.accordion-content {
+  border: 3px solid #9A7E11;
+  display: none;
+  padding: 20px 40px;
+  background-color: #f3f3f31a;
+  gap: 20px;
+}
+
+.acc-helper {
+  display: flex;
+}
+
+.accordion-content p {
+  margin: 10px 0;
+}
+
+.rating-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.similar-games-container {
+  max-width: 100%;
+  padding: 50px;
+  gap: 50px;
+  align-items: center;
+  background-color: #272727;
+}
+
+.link-content {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+#all-games-link div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#rarr {
+  width: 30px;
+  height: 30px;
+}
