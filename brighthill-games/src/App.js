@@ -4,6 +4,7 @@ import Games from "./routes/Games";
 import Careers from "./routes/Careers";
 import About from "./routes/About";
 import News from "./routes/News";
+import Game from "./routes/Game";
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/careers" element={<Careers />} />
       <Route path="/about" element={<About />} />
       <Route path="/news" element={<News />} />
+      <Route path="/game" element={<Game />} />
     </Routes>
   )
 }

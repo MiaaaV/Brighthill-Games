@@ -1,0 +1,37 @@
+.main-div {
+  height: 100vh;
+  background-image: url('../../images/backgrounds/planet-of-tomorrow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.first-div {
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  background-color: rgb(88, 45, 15);
+  margin: 15vh 40vh;
+}
+
+.first-div-content {
+  background-color: rgb(45, 94, 77);
+  align-items: center;
+  gap: 30px;
+}
+
+#game-name {
+  max-width: 100%;
+}
+
+.div-text {
+  padding: 5px 20px;
+  gap: 20px;
+}
+
+#game-img {
+  max-width: 100%;
+  max-height: 60%;
+}
