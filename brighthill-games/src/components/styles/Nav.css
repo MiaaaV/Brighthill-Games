@@ -16,10 +16,15 @@ gray = '#272727';
   justify-content: space-between;
   align-items: center;
   padding: 40px 60px;
+  box-shadow: 0 0 0 0.5px #f3f3f3;
+}
+
+.nav-container.scrolled {
+  box-shadow: none;
 }
 
 .scrolled {
-  background-color: #1f1f1f;
+  background-color: #0A0909;
 }
 
 nav {

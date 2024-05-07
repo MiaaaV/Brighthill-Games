@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -8,13 +8,15 @@ import gameData from "../components/GameData";
 import '../components/styles/Game.css';
 import Arrow from '../images/icons/arrow.png';
 import Rarr from '../images/icons/rarr.png';
+import Modal from '../components/VideoModal';
 
 function Game() {
 
   const { id } = useParams();
   const game = gameData.find(game => game.id === id); /* find correct game page by id */
 
-  /* */
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [id])
@@ -50,9 +52,12 @@ function Game() {
             <p className="grid-text">{game.description1}</p>
             <p className="grid-text">{game.description2}</p>
 
-            <a href={game.trailer} id="btn">Watch Trailer</a>
-          </div>
+            {game.id === "Echoes-of-Desolation" && (
+              <button id="btn-sm" onClick={() => setIsModalOpen(true)}>
+                Watch Trailer
+              </button>)}
 
+          </div>
 
           <div className="grid-img">
             <img id="game-img" src={game.banner} alt="Game" />
@@ -143,11 +148,11 @@ function Game() {
 
         <div className="link-content">
           <Link to={game.link_1}>
-            <img className="width" src={game.more_1} alt="similar game" />
+            <img id="game-link" className="width" src={game.more_1} alt="similar game" />
           </Link>
 
           <Link to={game.link_2}>
-            <img className="width" src={game.more_2} alt="similar game" />
+            <img id="game-link" className="width" src={game.more_2} alt="similar game" />
           </Link>
 
           <Link id="all-games-link" to="/games#all-games">
@@ -160,6 +165,7 @@ function Game() {
 
       </div >
 
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
     </>
   )

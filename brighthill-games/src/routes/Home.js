@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import "../components/styles/Home.css";
@@ -30,7 +31,9 @@ function Home() {
               <p>Will you unravel the secrets that have remained hidden for decades, or will you become another victim of Brighthill’s haunting legacy?</p>
             </div>
 
-            <button id="btn">Learn more</button>
+            <Link to="/Echoes-of-Desolation">
+              <button id="btn">Learn more</button>
+            </Link>
           </div>
 
           <FaAngleDown id="arrow-btn" />

@@ -43,9 +43,9 @@ function Games() {
             sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi.”
           </h3>
-          <a>
+          <Link to="/Echoes-of-Desolation">
             <button className="accepted-button">CHALLENGE ACCEPTED</button>
-          </a>
+          </Link>
         </div>
 
         <div className="character-image">

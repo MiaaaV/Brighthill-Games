@@ -15,7 +15,7 @@ function Nav() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > window.innerHeight * 0.3);
+      setIsScrolled(scrollPosition > window.innerHeight * 0.1);
     };
 
     window.addEventListener("scroll", handleScroll);
