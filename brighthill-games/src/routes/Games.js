@@ -6,12 +6,12 @@ import '../components/styles/Games.css';
 import '../App.css';
 import Star from '../images/icons/star.png';
 import Character from '../images/games/char2.png';
-import EOD from '../images/games/EOD.png';
-import CD from '../images/games/CD/Celestial Descent.png';
-import Extopia from '../images/games/ExtopiaThumb.png';
-import Solaris from '../images/games/SolarisSurge.png';
-import DoA from '../images/games/DoA.png';
-import PoT from '../images/games/PoT.png';
+import EOD from '../images/games/EoD/EOD.png';
+import CD from '../images/games/CD/CD.png';
+import Extopia from '../images/games/Extopia/Extopia.png';
+import Solaris from '../images/games/SolarisSurge/Solaris_Surge.png';
+import DoA from '../images/games/DoA/DoA.png';
+import PoT from '../images/games/PoT/PoT.png';
 import ADS from '../images/games/ADS.png';
 
 function Games() {
@@ -82,33 +82,41 @@ function Games() {
             </div>
           </Link>
 
-          <div className="all-games-image-container">
-            <div className="all-games-image-overlay">
-              <span className="all-games-image-overlay-text">Read more</span>
+          <Link to="/Extopia">
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={Extopia} alt="Extopia icon" className="all-games-image" />
             </div>
-            <img src={Extopia} alt="Extopia icon" className="all-games-image" />
-          </div>
+          </Link>
 
-          <div className="all-games-image-container">
-            <div className="all-games-image-overlay">
-              <span className="all-games-image-overlay-text">Read more</span>
+          <Link to="/Solaris-Surge">
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={Solaris} alt="Solaris Surge icon" className="all-games-image" />
             </div>
-            <img src={Solaris} alt="Solaris Surge icon" className="all-games-image" />
-          </div>
+          </Link>
 
-          <div className="all-games-image-container">
-            <div className="all-games-image-overlay">
-              <span className="all-games-image-overlay-text">Read more</span>
+          <Link to="/Dawn-of-Arcanum">
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={DoA} alt="Dawn of Arcanum icon" className="all-games-image" />
             </div>
-            <img src={DoA} alt="Dawn of Arcanum icon" className="all-games-image" />
-          </div>
+          </Link>
 
-          <div className="all-games-image-container">
-            <div className="all-games-image-overlay">
-              <span className="all-games-image-overlay-text">Read more</span>
+          <Link to="/Planet-of-Tomorrow">
+            <div className="all-games-image-container">
+              <div className="all-games-image-overlay">
+                <span className="all-games-image-overlay-text">Read more</span>
+              </div>
+              <img src={PoT} alt="Planet of Tomorrow icon" className="all-games-image" />
             </div>
-            <img src={PoT} alt="Planet of Tomorrow icon" className="all-games-image" />
-          </div>
+          </Link>
 
           {/*
             <img src={CD} alt="Celestial Descent icon" className="all-games-image"/>

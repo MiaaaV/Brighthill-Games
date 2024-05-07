@@ -14,10 +14,10 @@ function Game() {
   const { id } = useParams();
   const game = gameData.find(game => game.id === id); /* find correct game page by id */
 
-  /*useEffect(() => {
+  /* */
+  useEffect(() => {
     window.scrollTo(0, 0)
-    console.log("scrolled")
-  }, [id])*/
+  }, [id])
 
   useEffect(() => {
     const accordionBtns = document.querySelectorAll(".accordion-btn");
@@ -95,20 +95,21 @@ function Game() {
 
               <div className="accordion-content flex-col">
                 <div className="acc-helper col-12">
-                  <div className="col-6">
+                  <div className="col-8">
                     <p>Title</p>
                     <p>Genre</p>
                     <p>Release date</p>
                     <p>Rating</p>
                   </div>
 
-                  <div className="col-6">
+                  <div className="col-8">
                     <p>{game.title}</p>
                     <p>{game.genre}</p>
                     <p>{game.date}</p>
                     <div className="rating-icons">
-                      <img src={game.rating_1} alt="Pegi icon" />
-                      <img src={game.rating_2} alt="Violence icon" />
+                      <img src={game.rating_1} alt="" />
+                      <img src={game.rating_2} alt="" />
+                      <img src={game.rating_3} alt="" />
                     </div>
                   </div>
                 </div>
@@ -140,14 +141,12 @@ function Game() {
           <h2 className="uppercase">more games like {game.title}</h2>
         </div>
 
-        {/** !!!! how to get the exact link? */}
-
         <div className="link-content">
-          <Link to="/Dawn-of-Arcanum">
+          <Link to={game.link_1}>
             <img className="width" src={game.more_1} alt="similar game" />
           </Link>
 
-          <Link to="/Solaris-Surge">
+          <Link to={game.link_2}>
             <img className="width" src={game.more_2} alt="similar game" />
           </Link>
 
@@ -159,7 +158,7 @@ function Game() {
           </Link>
         </div>
 
-      </div>
+      </div >
 
       <Footer />
     </>
