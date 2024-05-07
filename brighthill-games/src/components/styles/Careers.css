@@ -8,12 +8,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    filter: brightness(0.3);
+    filter: brightness(0.25);
     z-index: -1;
 }
 .careers-banner {
     text-align: center;
-    padding: 20vh 10vh 5vh 10vh;
+    padding: 21vh 10vh 5vh 10vh;
     font-size: 20px;
     letter-spacing: 1px;
 }
@@ -27,7 +27,7 @@
     background-image: url('../../images/backgrounds/Careersbg.png');
     background-size: cover;
     background-position: center;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 0.5);
     display: flex;
     padding: 0vh 22vh 0vh 14vh;
     gap: 170px;
@@ -56,6 +56,7 @@
 .careers-text-box h3 {
     font-weight: 600;
     margin-top: 4vh;
+    line-height: 1.5em;
 }
 
 /*------ OPEN POSITIONS CSS ------*/
@@ -92,7 +93,7 @@
 .careers-positions {
     padding: 6vh 0vh 6vh 0;
 }
-.careers-positions-boxes {
+.careers-positions-boxes-scroll {
     display: flex;
     gap: 50px;
     width: 100%;
@@ -101,8 +102,101 @@
     cursor: grab;
     user-select: none;
 }
+.careers-positions-boxes {
+    display: flex;
+    gap: 20px;
+    padding: 0vh 2vh 0vh 2vh;
+}
 .careers-positions-boxes-single {
-    background-color: #f3f3f3;
+    background-color: #d1d1d1;
     color: #3c3c3c;
-    padding: 2vh 2vh 2vh 2vh;
+    padding: 3vh 3vh 3vh 3vh;
+    width: 200px; 
+}
+.careers-positions-boxes-single:hover {
+    background-color: #c2c2c2;
+}
+.careers-positions-boxes-single-h2 {
+    font-size: 14px;
+    text-align: left;
+    white-space: normal;
+    height: 4em;
+    line-height: 2em;
+    border-bottom: 1px solid #1f1f1f;
+    padding-bottom: 12px;
+}
+.careers-positions-boxes-single p {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+/*------ HELSINKI PART CSS ------*/
+
+.careers-helsinki-container {
+    background-color: #23404D;
+    display: flex;
+    align-items: center;
+    padding: 8vh 22vh 8vh 22vh;
+    gap: 100px;
+}
+.careers-lorem-text {
+    text-align: center;
+}
+.careers-lorem-text h2 {
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.careers-lorem-text h3 {
+    margin-top: 54px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+/*------ FAQ CSS ------*/
+
+.careers-faq-container {
+    background-color: #f3f3f3;
+    color: #1f1f1f;
+    padding: 6vh 1vh 8vh 1vh;
+}
+.careers-faq-container h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+.careers-faq-list {
+    font-size: 24px;
+    padding: 0vh 10vh 0vh 10vh;
+    margin-top: 60px;
+}
+.careers-accordion-btn {
+    border: none;
+    border-bottom: 1px solid #1f1f1f52;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    width: 100%;
+    padding: 3vh 1vh 3vh 1vh;
+}
+.careers-accordion-btn div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.careers-accordion-btn h3 {
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.careers-accordion-content {
+    display: none;
+    padding: 20px 10px;
+    gap: 20px;
+}
+.careers-arrow-icon {
+    rotate: 180deg;
+    width: 30px;
+    margin-right: 20px;
 }
