@@ -6,9 +6,11 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import gameData from "../components/GameData";
 import '../components/styles/Game.css';
+import '../components/styles/Reusables.css';
 import Arrow from '../images/icons/arrow.png';
 import Rarr from '../images/icons/rarr.png';
 import Modal from '../components/VideoModal';
+import { FaAngleDown } from "react-icons/fa";
 
 function Game() {
 
@@ -16,10 +18,7 @@ function Game() {
   const game = gameData.find(game => game.id === id); /* find correct game page by id */
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [id])
+  const [isAccordionOpen, setIsAccordionOpen] = useState(true);
 
   useEffect(() => {
     const accordionBtns = document.querySelectorAll(".accordion-btn");
@@ -28,6 +27,7 @@ function Game() {
       btn.addEventListener("click", function () {
         const content = this.nextElementSibling;
         content.style.display = content.style.display === "flex" ? "none" : "flex";
+        setIsAccordionOpen(prevState => !prevState)
       });
 
       // open by default
@@ -59,11 +59,11 @@ function Game() {
 
           </div>
 
-          <div className="grid-img">
+          <div className="flex-row flex-center">
             <img id="game-img" src={game.banner} alt="Game" />
           </div>
 
-          <div className="grid-img">
+          <div className="flex-row flex-center">
             <img className="filler-img" src={game.filler_img_1} alt="Game" />
           </div>
 
@@ -81,7 +81,7 @@ function Game() {
             <p className="grid-text">{game.filler_text_2}</p>
           </div>
 
-          <div className="grid-img">
+          <div className="flex-row flex-center">
             <img className="filler-img" src={game.filler_img_2} alt="Game" />
           </div>
 
@@ -92,14 +92,14 @@ function Game() {
           <div className="grid-item">
             <div className="accordion-item col-12">
               <button className="accordion-btn">
-                <div>
+                <div className="flex-align">
                   <h3 className="white" style={{ marginLeft: "20px" }}>overview</h3>
-                  <img id="arr-icon" src={Arrow} alt="arrow icon" />
+                  <FaAngleDown id="arr-icon" className={`white ${isAccordionOpen ? 'rotate-icon' : ''}`} />
                 </div>
               </button>
 
               <div className="accordion-content flex-col">
-                <div className="acc-helper col-12">
+                <div className="flex col-12">
                   <div className="col-8">
                     <p>Title</p>
                     <p>Genre</p>
@@ -111,7 +111,7 @@ function Game() {
                     <p>{game.title}</p>
                     <p>{game.genre}</p>
                     <p>{game.date}</p>
-                    <div className="rating-icons">
+                    <div className="rating-icons flex">
                       <img src={game.rating_1} alt="" />
                       <img src={game.rating_2} alt="" />
                       <img src={game.rating_3} alt="" />
@@ -119,7 +119,7 @@ function Game() {
                   </div>
                 </div>
 
-                <div className="acc-helper col-12">
+                <div className="flex col-12">
                   <div className="col-6">
                     <p>Publisher</p>
                     <p>Developer</p>
@@ -146,7 +146,7 @@ function Game() {
           <h2 className="uppercase">more games like {game.title}</h2>
         </div>
 
-        <div className="link-content">
+        <div className="link-content flex">
           <Link to={game.link_1}>
             <img id="game-link" className="width" src={game.more_1} alt="similar game" />
           </Link>

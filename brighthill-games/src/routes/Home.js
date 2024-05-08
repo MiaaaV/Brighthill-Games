@@ -5,7 +5,8 @@ import "../components/styles/Home.css";
 import "../components/styles/Reusables.css";
 import "../App.css";
 import "../assets/fonts/fonts.css";
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown, FaArrowRight } from "react-icons/fa";
+import { animateScroll } from "react-scroll";
 import News1 from '../images/news/news1.png';
 import News2 from '../images/news/news2.png';
 import News3 from '../images/news/news3.png';
@@ -16,6 +17,17 @@ import Banner4 from '../images/games/DoA/DoA_card.png';
 import Recruit from '../images/backgrounds/fp-recruit.png';
 
 function Home() {
+
+  const scrollToRecent = () => {
+    const recentSection = document.getElementById("recent");
+    const navHeight = 144;
+    const sectionTop = recentSection.getBoundingClientRect().top;
+    const offset = sectionTop + window.scrollY - navHeight;
+    animateScroll.scrollTo(offset, {
+      smooth: true,
+      duration: 300
+    });
+  };
 
   return (
     <>
@@ -36,49 +48,77 @@ function Home() {
             </Link>
           </div>
 
-          <FaAngleDown id="arrow-btn" />
+          <FaAngleDown onClick={scrollToRecent} id="arrow-btn" />
         </div>
 
-        <div className="recent grid-1-2">
-          <h2 className="uppercase heading-2">Recent news and articles</h2>
+        <div id="recent" className="recent grid-1-2">
+          <Link to="/news">
+            <h2 className="uppercase heading-2">Recent news and articles</h2>
+          </Link>
 
           <div className="recent-content grid-3-1">
-            <div className="flex-col">
-              <img className="recent-img" src={News1} alt="News content" />
+            <Link to="/news">
+              <div className="flex-col">
+                <img className="recent-img" src={News1} alt="News content" />
 
-              <div className="recent-text-box flex-col">
-                <h3 className="uppercase">EoD - behind the scenes</h3>
-                <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div className="recent-text-box flex-col">
+                  <h3 className="uppercase">EoD - behind the scenes</h3>
+                  <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="flex-col">
-              <img className="recent-img" src={News2} alt="News content" />
-              <div className="recent-text-box flex-col">
-                <h3 className="uppercase">Making lady Veronica</h3>
-                <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+            <Link to="/news">
+              <div className="flex-col">
+                <img className="recent-img" src={News2} alt="News content" />
+                <div className="recent-text-box flex-col">
+                  <h3 className="uppercase">Making lady Veronica</h3>
+                  <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="flex-col">
-              <img className="recent-img" src={News3} alt="News content" />
-              <div className="recent-text-box flex-col">
-                <h3 className="uppercase">2024 awards nominee</h3>
-                <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+            <Link to="/news">
+              <div className="flex-col">
+                <img className="recent-img" src={News3} alt="News content" />
+                <div className="recent-text-box flex-col">
+                  <h3 className="uppercase">2024 awards nominee</h3>
+                  <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 
         <div className="fp-games grid-1-2">
-          <h2 className="uppercase heading-2">Our games</h2>
+          <div className="flex-row flex-between">
+            <h2 className="uppercase heading-2">Our games</h2>
+            <Link to="/games">
+              <div className="flex-row all-games-btn">
+                <h2 className="">All games</h2>
+                <FaArrowRight />
+              </div>
+            </Link>
+          </div>
 
           <div className="fp-games-content grid-2-1">
-            <img className="fp-game" src={Banner1} alt="Games content" />
-            <img className="fp-game" src={Banner2} alt="Games content" />
-            <img className="fp-game" src={Banner3} alt="Games content" />
-            <img className="fp-game" src={Banner4} alt="Games content" />
+            <Link to="/Solaris-Surge">
+              <img className="fp-game" src={Banner1} alt="Games content" />
+            </Link>
+
+            <Link to="/Extopia">
+              <img className="fp-game" src={Banner2} alt="Games content" />
+            </Link>
+
+            <Link to="/Celestial-Descent-Age-of-Dragons">
+              <img className="fp-game" src={Banner3} alt="Games content" />
+            </Link>
+
+            <Link to="/Dawn-of-Arcanum">
+              <img className="fp-game" src={Banner4} alt="Games content" />
+            </Link>
           </div>
+
         </div>
 
         <div className="fp-recruit grid-2-1">
@@ -101,7 +141,9 @@ function Home() {
             </div>
 
             <div>
-              <button id="btn">explore positions</button>
+              <Link to="/careers#explore">
+                <button id="btn">explore positions</button>
+              </Link>
             </div>
           </div>
 
