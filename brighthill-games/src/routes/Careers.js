@@ -19,6 +19,11 @@ function Careers() {
 
   const careersPositions = useRef();
 
+  const [openIndex, setOpenIndex] = useState(null);
+  const toggleAccordion = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
+
   function handleMouseDown(e) {
     console.log(e.pageX);
 
@@ -96,7 +101,7 @@ function Careers() {
         </div>
       </div>
 
-      <div className="careers-jobs">
+      <div id="explore" className="careers-jobs">
         <div className="careers-jobs-titles">
           <div className="careers-jobs-open">
             <h2>current open positions</h2>
@@ -163,12 +168,14 @@ function Careers() {
       <div className="careers-faq-container">
         <h2>Frequently asked questions</h2>
         <div className="careers-faq-list">
-          {faqData.map(item => (
+          {faqData.map((item, index) => (
             <div key={item.id} className="careers-faq-item">
-              <button className="careers-accordion-btn">
+              <button className="careers-accordion-btn" onClick={() => toggleAccordion(index)}>
                 <div>
                   <h3>{item.question}</h3>
-                  <img className="careers-arrow-icon" src={Arrow} alt="Arrow icon"/>
+                  <img className={`careers-arrow-icon ${openIndex === index ? 'rotate-icon' : ''}`} 
+                  src={Arrow} 
+                  alt="Arrow icon"/>
                 </div>
               </button>
               
