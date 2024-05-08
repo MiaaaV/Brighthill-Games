@@ -1,0 +1,17 @@
+.header-background {
+  background-image: url('../../images/backgrounds/Header_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  align-content: flex-end;
+  padding-bottom: 50px;
+}
+
+.header-heading {
+  font-family: 'Baloo Bhai 2';
+}

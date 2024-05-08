@@ -7,7 +7,6 @@ import Nav from "../components/Nav";
 import gameData from "../components/GameData";
 import '../components/styles/Game.css';
 import '../components/styles/Reusables.css';
-import Arrow from '../images/icons/arrow.png';
 import Rarr from '../images/icons/rarr.png';
 import Modal from '../components/VideoModal';
 import { FaAngleDown } from "react-icons/fa";
