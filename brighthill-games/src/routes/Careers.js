@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import Header from '../components/Header';
 import '../components/styles/Careers.css';
 import Masterchef from '../images/careers/Masterchef.png';
 import careersData from '../components/CareersData';
@@ -23,6 +24,29 @@ function Careers() {
   const toggleAccordion = (index) => {
     setOpenIndex(index === openIndex ? null : index);
   };
+
+  const [filteredJobs, setFilteredJobs] = useState(careersData);
+  const [activeFilter, setActiveFilter] = useState(null);
+  const [departmentCounts, setDepartmentCounts] = useState([]);
+
+  useEffect(() => {
+    const counts = {};
+    careersData.forEach(job => {
+      counts[job.department] = (counts[job.department] || 0) + 1;
+    });
+    setDepartmentCounts(counts);
+  }, [careersData]);
+
+  const filterJobsByDepartment = (department) => {
+    if (activeFilter === department) {
+      setFilteredJobs(careersData);
+      setActiveFilter(null);
+    } else {
+      const filtered = careersData.filter(job => job.department === department);
+      setFilteredJobs(filtered);
+      setActiveFilter(department);
+    }
+  }
 
   function handleMouseDown(e) {
     console.log(e.pageX);
@@ -48,13 +72,6 @@ function Careers() {
     careersPositions.current.scrollLeft = scrollLeftState - mouseMoved;
   }, [scrollLeftState, mouseMoved]);
 
-  /* useEffect(() => {
-    fetch('CareersData.js')
-      .then(response => response.json())
-      .then(data => setCareersData(data))
-      .catch(error => console.error("Vituiks män", error))
-  }, []); */
-
   useEffect(() => {
     const accordionBtns = document.querySelectorAll(".careers-accordion-btn");
 
@@ -63,21 +80,15 @@ function Careers() {
         const content = this.nextElementSibling;
         content.style.display = content.style.display === "flex" ? "none" : "flex";
       });
-
-      // open by default
-      /* const content = btn.nextElementSibling;
-      content.style.display = "flex"; */
+      
     });
   }, []);
 
   return (
     <>
       <Nav />
-      <div className="careers-banner-bg"></div>
 
-        <div className="careers-banner">
-          <h1 className="careers-title">Join brighthill games</h1>
-        </div>
+      <Header />
 
       <div className="careers-hero">
         <div className="careers-character">
@@ -109,16 +120,24 @@ function Careers() {
 
           <div className="careers-titles-list">
               <div className="careers-titles-list-container">
-                <p>Marketing: 2</p>
+                <button onClick={() => filterJobsByDepartment("Marketing")} className={`filter-button ${activeFilter === "Marketing" ? "active" : ""}`}>
+                  Marketing: {departmentCounts["Marketing"] || 0}
+                </button>
               </div>
               <div className="careers-titles-list-container">
-                <p>Art: 2</p>
+                <button onClick={() => filterJobsByDepartment("Art")} className={`filter-button ${activeFilter === "Art" ? "active" : ""}`}>
+                  Art: {departmentCounts["Art"] || 0}
+                </button>
               </div>
               <div className="careers-titles-list-container">
-                <p>Production: 1</p>
+                <button onClick={() => filterJobsByDepartment("Production")} className={`filter-button ${activeFilter === "Production" ? "active" : ""}`}>
+                  Production: {departmentCounts["Production"] || 0}
+                </button>
               </div>
               <div className="careers-titles-list-container">
-                <p>Game Design: 3</p>
+                <button onClick={() => filterJobsByDepartment("Game Design")} className={`filter-button ${activeFilter === "Game Design" ? "active" : ""}`}>
+                  Game Design: {departmentCounts["Game Design"] || 0}
+                </button>
               </div>
           </div>
         </div>
@@ -132,14 +151,14 @@ function Careers() {
           >
 
             <div className="careers-positions-boxes">
-                {careersData.map(careers => (
-                  <div key={careers.id} className="careers-positions-boxes-single">
+                {filteredJobs.map(job => (
+                  <div key={job.id} className="careers-positions-boxes-single">
                     <div className="careers-positions-boxes-single-h2">
-                      <h2>{careers.jobTitle}</h2>
+                      <h2>{job.jobTitle}</h2>
                     </div>
-                    <p>{careers.department}</p>
-                    <p>{careers.location}</p>
-                    <p>{careers.timeType}</p>
+                    <p>{job.department}</p>
+                    <p>{job.location}</p>
+                    <p>{job.timeType}</p>
                   </div>
                 ))}
             </div>

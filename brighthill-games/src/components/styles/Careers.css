@@ -1,25 +1,3 @@
-/*------ BANNER CSS ------*/
-
-.careers-banner-bg {
-    background-image: url('../../images/backgrounds/Bannerbg.jpg'); 
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: brightness(0.25);
-    z-index: -1;
-}
-.careers-banner {
-    text-align: center;
-    padding: 21vh 10vh 5vh 10vh;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-.careers-title {
-    text-transform: uppercase;
-}
 
 /*------ HERO CSS ------*/
 
@@ -82,13 +60,21 @@
     justify-content: center;
     gap: 20px;
 }
-.careers-titles-list-container {
-    background-color: #725934;
+.careers-titles-list-container button {
+    background-color: #927243;
     padding: 2vh 6vh 2vh 6vh;
     border-radius: 3px;
+    border: none;
+    font-size: 1.125rem;
+    color: #f3f3f3;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
 }
-.careers-titles-list p {
-    font-size: 18px;
+.careers-titles-list-container button:hover {
+    background-color: #695230; /* #725934 */
+}
+.filter-button.active {
+    background-color: #695230;
 }
 .careers-positions {
     padding: 6vh 0vh 6vh 0;
@@ -111,10 +97,11 @@
     background-color: #d1d1d1;
     color: #3c3c3c;
     padding: 3vh 3vh 3vh 3vh;
-    width: 200px; 
+    width: 200px;
+    transition: background-color 0.4s ease;
 }
 .careers-positions-boxes-single:hover {
-    background-color: #c2c2c2;
+    background-color: #bdbdbd;
 }
 .careers-positions-boxes-single-h2 {
     font-size: 14px;
