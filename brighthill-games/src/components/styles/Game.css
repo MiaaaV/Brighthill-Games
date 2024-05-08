@@ -1,3 +1,5 @@
+/* GAME INFO */
+
 .main-game-div {
   position: relative;
   background-repeat: no-repeat;
@@ -42,12 +44,6 @@
   width: 80%;
 }
 
-.grid-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #game-img {
   width: 100%;
 }
@@ -55,6 +51,8 @@
 .filler-img {
   width: 70%;
 }
+
+/* OVERVIEW */
 
 .accordion-btn {
   background-color: #9A7E11;
@@ -73,9 +71,12 @@
 }
 
 #arr-icon {
-  rotate: 180deg;
-  width: 20px;
+  font-size: 1.5rem;
   margin-right: 20px;
+}
+
+.rotate-icon {
+  transform: rotate(180deg);
 }
 
 .accordion-content {
@@ -86,18 +87,15 @@
   gap: 20px;
 }
 
-.acc-helper {
-  display: flex;
-}
-
 .accordion-content p {
   margin: 10px 0;
 }
 
 .rating-icons {
-  display: flex;
   gap: 10px;
 }
+
+/* SIMILAR GAMES */
 
 .similar-games-container {
   max-width: 100%;
@@ -109,7 +107,6 @@
 
 .link-content {
   max-width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
