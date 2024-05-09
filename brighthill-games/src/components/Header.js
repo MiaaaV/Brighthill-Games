@@ -21,6 +21,9 @@ function Header() {
       case "/about":
         headerText = "We are Brighthill";
         break;
+      case "/news":
+        headerText = "News";
+        break;
       default:
         headerText = "Page Not Found";
     }

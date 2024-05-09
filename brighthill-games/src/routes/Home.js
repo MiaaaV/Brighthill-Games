@@ -18,6 +18,28 @@ import Recruit from '../images/backgrounds/fp-recruit.png';
 
 function Home() {
 
+  const newsData = [
+    {
+      title: 'EoD - Behind the scenes',
+      image: News1
+    },
+    {
+      title: 'Making lady Veronica',
+      image: News2
+    },
+    {
+      title: '2024 Awards nominee',
+      image: News3
+    }
+  ];
+
+  const gamesData = [
+    { title: 'Solaris Surge', image: Banner1 },
+    { title: 'Extopia', image: Banner2 },
+    { title: 'Celestial Descent: Age of Dragons', image: Banner3 },
+    { title: 'Dawn of Arcanum', image: Banner4 }
+  ];
+
   const scrollToRecent = () => {
     const recentSection = document.getElementById("recent");
     const navHeight = 144;
@@ -57,44 +79,26 @@ function Home() {
           </Link>
 
           <div className="recent-content grid-3-1">
-            <Link to="/news">
-              <div className="flex-col">
-                <img className="recent-img" src={News1} alt="News content" />
-
-                <div className="recent-text-box flex-col">
-                  <h3 className="uppercase">EoD - behind the scenes</h3>
-                  <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+            {newsData.map((news, index) => (
+              <Link to="/news" key={index}>
+                <div className="flex-col">
+                  <img className="recent-img" src={news.image} alt="News content" />
+                  <div className="recent-text-box flex-col">
+                    <h3 className="uppercase">{news.title}</h3>
+                    <p style={{ textAlign: 'justify' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
-              </div>
-            </Link>
-
-            <Link to="/news">
-              <div className="flex-col">
-                <img className="recent-img" src={News2} alt="News content" />
-                <div className="recent-text-box flex-col">
-                  <h3 className="uppercase">Making lady Veronica</h3>
-                  <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/news">
-              <div className="flex-col">
-                <img className="recent-img" src={News3} alt="News content" />
-                <div className="recent-text-box flex-col">
-                  <h3 className="uppercase">2024 awards nominee</h3>
-                  <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
         </div>
 
         <div className="fp-games grid-1-2">
           <div className="flex-row flex-between">
             <h2 className="uppercase heading-2">Our games</h2>
-            <Link to="/games">
-              <div className="flex-row all-games-btn">
+
+            <Link to="/games" className="all-games-btn">
+              <div className="flex-row">
                 <h2 className="">All games</h2>
                 <FaArrowRight />
               </div>
@@ -102,23 +106,12 @@ function Home() {
           </div>
 
           <div className="fp-games-content grid-2-1">
-            <Link to="/Solaris-Surge">
-              <img className="fp-game" src={Banner1} alt="Games content" />
-            </Link>
-
-            <Link to="/Extopia">
-              <img className="fp-game" src={Banner2} alt="Games content" />
-            </Link>
-
-            <Link to="/Celestial-Descent-Age-of-Dragons">
-              <img className="fp-game" src={Banner3} alt="Games content" />
-            </Link>
-
-            <Link to="/Dawn-of-Arcanum">
-              <img className="fp-game" src={Banner4} alt="Games content" />
-            </Link>
+            {gamesData.map((game, index) => (
+              <Link to={`/${game.title}`} key={index}>
+                <img className="fp-game" src={game.image} alt="Games content" />
+              </Link>
+            ))}
           </div>
-
         </div>
 
         <div className="fp-recruit grid-2-1">

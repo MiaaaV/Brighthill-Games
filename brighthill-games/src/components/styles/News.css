@@ -1,0 +1,32 @@
+.main-news-container {
+  background-color: #23404D;
+  padding: 50px 0;
+  gap: 50px;
+}
+
+.news-card {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.news-img {
+  object-fit: cover;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-content {
+  flex: 1;
+  padding: 50px;
+  justify-content: flex-start;
+  gap: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgb(0, 0, 0) 0px 30px 60px -30px, rgb(0, 0, 0) 0px -2px 6px 0px inset;
+}
+
+
+.news-btn {
+  align-self: center;
+}
