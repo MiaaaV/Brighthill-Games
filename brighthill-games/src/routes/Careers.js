@@ -8,6 +8,7 @@ import careersData from '../components/CareersData';
 import faqData from '../components/FAQData';
 import Helsinki from '../images/careers/Helsinki.png';
 import Arrow from '../images/icons/arrow.png';
+import { Link } from 'react-router-dom';
 
 function Careers() {
 
@@ -80,7 +81,7 @@ function Careers() {
         const content = this.nextElementSibling;
         content.style.display = content.style.display === "flex" ? "none" : "flex";
       });
-      
+
     });
   }, []);
 
@@ -152,14 +153,16 @@ function Careers() {
 
             <div className="careers-positions-boxes">
                 {filteredJobs.map(job => (
-                  <div key={job.id} className="careers-positions-boxes-single">
-                    <div className="careers-positions-boxes-single-h2">
-                      <h2>{job.jobTitle}</h2>
+                  <Link key={job.jobTitle} to={`/jobinfo/${encodeURIComponent(job.jobTitle.replace(/\s+/g, '-'))}`} className="career-position-link">
+                    <div className="careers-positions-boxes-single">
+                      <div className="careers-positions-boxes-single-h2">
+                        <h2>{job.jobTitle}</h2>
+                      </div>
+                      <p>{job.department}</p>
+                      <p>{job.location}</p>
+                      <p>{job.timeType}</p>
                     </div>
-                    <p>{job.department}</p>
-                    <p>{job.location}</p>
-                    <p>{job.timeType}</p>
-                  </div>
+                  </Link>
                 ))}
             </div>
           </div>
@@ -168,7 +171,7 @@ function Careers() {
 
       <div className="careers-helsinki-container">
         <div className="careers-helsinki">
-          <img src={Helsinki} alt="Image of Helsinki" className="careers-helsinki-img"/>
+          <img src={Helsinki} alt="Aerial footage of Helsinki" className="careers-helsinki-img"/>
         </div>
 
         <div className="careers-lorem-text">

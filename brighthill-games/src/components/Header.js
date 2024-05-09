@@ -6,16 +6,24 @@ function Header() {
   const location = useLocation();
   let headerText = "";
 
+  const match = location.pathname.match(/^\/jobinfo\/(.+)$/);
+  const jobTitle = match ? decodeURIComponent(match[1].replace(/-/g, ' ')) : null;
+
   // decide header text based on the current page
-  switch (location.pathname) {
-    case "/careers":
-      headerText = "Join Brighthill Games";
-      break;
-    case "/about":
-      headerText = "We are Brighthill";
-      break;
-    default:
-      headerText = "Page Not Found";
+  if (match) {
+    headerText = `${jobTitle}`;
+  } else {
+    // Decide header text based on other pages
+    switch (location.pathname) {
+      case "/careers":
+        headerText = "Join Brighthill Games";
+        break;
+      case "/about":
+        headerText = "We are Brighthill";
+        break;
+      default:
+        headerText = "Page Not Found";
+    }
   }
 
   return (

@@ -8,6 +8,7 @@ import Careers from "./routes/Careers";
 import About from "./routes/About";
 import News from "./routes/News";
 import Game from "./routes/Game";
+import JobInfo from './routes/JobInfo';
 import './App.css';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/news" element={<News />} />
       <Route path="/:id" element={<Game />} />
+      <Route path="/jobinfo/:jobTitle" element={<JobInfo />} />
     </Routes>
   )
 }
