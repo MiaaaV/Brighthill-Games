@@ -16,6 +16,15 @@ import ADS from '../images/games/ADS.png';
 
 function Games() {
 
+  const games = [
+    { name: "Echoes of Desolation", image: EOD, alt: "Echoes of Desolation icon" },
+    { name: "Celestial Descent: Age of Dragons", image: CD, alt: "Celestial Descent icon" },
+    { name: "Extopia", image: Extopia, alt: "Extopia icon" },
+    { name: "Solaris Surge", image: Solaris, alt: "Solaris Surge icon" },
+    { name: "Dawn of Arcanum", image: DoA, alt: "Dawn of Arcanum icon" },
+    { name: "Planet of Tomorrow", image: PoT, alt: "Planet of Tomorrow icon" }
+  ];
+
   return (
     <>
       <Nav />
@@ -23,18 +32,9 @@ function Games() {
         <div className="textstuff">
 
           <ul className="star-icon-list">
-            <a>
-              <img src={Star} id="star" alt="Star icon" className="star-icon" />
-            </a>
-            <a>
-              <img src={Star} id="star" alt="Star icon" className="star-icon" />
-            </a>
-            <a>
-              <img src={Star} id="star" alt="Star icon" className="star-icon" />
-            </a>
-            <a>
-              <img src={Star} id="star" alt="Star icon" className="star-icon" />
-            </a>
+            {[...Array(4)].map((_) => (
+              <img src={Star} alt="Star icon" className="star-icon" />
+            ))}
           </ul>
 
           <h2 className="title-text">
@@ -56,76 +56,25 @@ function Games() {
 
       <div id="all-games" className="all-games-container">
 
-        <div className="all-games-bg"></div>  {/* To be able to give background a blur without blurring other content */}
+        <div className="all-games-bg"></div>
 
         <div className="all-games-title-container">
           <h1 className="all-games-title">ALL GAMES</h1>
         </div>
 
         <div className="all-games-grid">
-
-          <Link to="/Echoes-of-Desolation">
-            <div className="all-games-image-container">
-              <div className="all-games-image-overlay">
-                <span className="all-games-image-overlay-text">Read more</span>
+          {games.map((game, index) => (
+            <Link to={`/${game.name}`} key={index}>
+              <div className="all-games-image-container">
+                <div className="all-games-image-overlay">
+                  <span className="all-games-image-overlay-text">Read more</span>
+                </div>
+                <img src={game.image} alt={game.alt} className="all-games-image" />
               </div>
-              <img src={EOD} alt="Echoes of Desolation icon" className="all-games-image" />
-            </div>
-          </Link>
-
-          <Link to="/Celestial-Descent-Age-of-Dragons">
-            <div className="all-games-image-container">
-              <div className="all-games-image-overlay">
-                <span className="all-games-image-overlay-text">Read more</span>
-              </div>
-              <img src={CD} alt="Celestial Descent icon" className="all-games-image" />
-            </div>
-          </Link>
-
-          <Link to="/Extopia">
-            <div className="all-games-image-container">
-              <div className="all-games-image-overlay">
-                <span className="all-games-image-overlay-text">Read more</span>
-              </div>
-              <img src={Extopia} alt="Extopia icon" className="all-games-image" />
-            </div>
-          </Link>
-
-          <Link to="/Solaris-Surge">
-            <div className="all-games-image-container">
-              <div className="all-games-image-overlay">
-                <span className="all-games-image-overlay-text">Read more</span>
-              </div>
-              <img src={Solaris} alt="Solaris Surge icon" className="all-games-image" />
-            </div>
-          </Link>
-
-          <Link to="/Dawn-of-Arcanum">
-            <div className="all-games-image-container">
-              <div className="all-games-image-overlay">
-                <span className="all-games-image-overlay-text">Read more</span>
-              </div>
-              <img src={DoA} alt="Dawn of Arcanum icon" className="all-games-image" />
-            </div>
-          </Link>
-
-          <Link to="/Planet-of-Tomorrow">
-            <div className="all-games-image-container">
-              <div className="all-games-image-overlay">
-                <span className="all-games-image-overlay-text">Read more</span>
-              </div>
-              <img src={PoT} alt="Planet of Tomorrow icon" className="all-games-image" />
-            </div>
-          </Link>
-
-          {/*
-            <img src={CD} alt="Celestial Descent icon" className="all-games-image"/>
-            <img src={Extopia} alt="Extopia icon" className="all-games-image"/>
-            <img src={Solaris} alt="Solaris Surge icon" className="all-games-image"/>
-            <img src={DoA} alt="Dawn of Arcanum icon" className="all-games-image"/>
-            <img src={PoT} alt="Planet of Tomorrow icon" className="all-games-image"/>
-          */}
+            </Link>
+          ))}
         </div>
+
       </div>
 
       <div className="ad">
