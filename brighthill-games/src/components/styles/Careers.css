@@ -85,9 +85,19 @@
     display: flex;
     width: 100%;
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow-x: auto;
     cursor: grab;
     user-select: none;
+    padding-bottom: 6vh;
+}
+.careers-positions-boxes-scroll::-webkit-scrollbar {
+    background-color: #15272efd
+}
+.careers-positions-boxes-scroll::-webkit-scrollbar-thumb {
+    background-color: #f3f3f3;
+}
+.careers-positions-boxes-scroll::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
 .careers-positions-boxes {
     display: flex;
@@ -102,6 +112,10 @@
     padding: 3vh 3vh 3vh 3vh;
     width: 200px;
     transition: background-color 0.4s ease;
+    pointer-events: auto;
+}
+.career-position-link {
+    pointer-events: none;
 }
 .careers-positions-boxes-single:hover {
     background-color: #bdbdbd;

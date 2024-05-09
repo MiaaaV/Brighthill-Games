@@ -12,13 +12,6 @@ import { Link } from 'react-router-dom';
 
 function Careers() {
 
-  //const [careersData, setCareersData] = useState([]);
-
-  const [isDown, setIsDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeftState, setScrollLeftState] = useState(null);
-  const [mouseMoved, setMouseMoved] = useState(0);
-
   const careersPositions = useRef();
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -48,30 +41,6 @@ function Careers() {
       setActiveFilter(department);
     }
   }
-
-  function handleMouseDown(e) {
-    console.log(e.pageX);
-
-    setIsDown(true);
-    setStartX(e.pageX - careersPositions.current.offsetLeft);
-    setScrollLeftState(careersPositions.current.scrollLeft)
-    setMouseMoved(0);
-  }
-
-  function handleMouseMove(e) {
-    if (!isDown) {
-      return;
-    }
-    
-    const currentMousePositionInsideContainer =
-    e.pageX - careersPositions.current.offsetLeft;
-    
-    setMouseMoved(currentMousePositionInsideContainer - startX);
-  }
-
-  useEffect(() => {
-    careersPositions.current.scrollLeft = scrollLeftState - mouseMoved;
-  }, [scrollLeftState, mouseMoved]);
 
   useEffect(() => {
     const accordionBtns = document.querySelectorAll(".careers-accordion-btn");
@@ -144,16 +113,11 @@ function Careers() {
         </div>
 
         <div className="careers-positions">
-          <div className="careers-positions-boxes-scroll" ref={careersPositions}
-          onMouseDown={(e) => handleMouseDown(e)}
-          onMouseUp={() => setIsDown(false)}
-          onMouseLeave={() => setIsDown(false)}
-          onMouseMove={(e) => handleMouseMove(e)}
-          >
+          <div className="careers-positions-boxes-scroll" ref={careersPositions}>
 
             <div className="careers-positions-boxes">
                 {filteredJobs.map(job => (
-                  <Link key={job.jobTitle} to={`/jobinfo/${encodeURIComponent(job.jobTitle.replace(/\s+/g, '-'))}`} className="career-position-link">
+                  <Link key={job.jobTitle} to={`/jobinfo/${encodeURIComponent(job.jobTitle.replace(/\s+/g, ' '))}`} className="career-position-link">
                     <div className="careers-positions-boxes-single">
                       <div className="careers-positions-boxes-single-h2">
                         <h2>{job.jobTitle}</h2>
