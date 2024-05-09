@@ -44,6 +44,11 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-4-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -52,8 +57,20 @@
   font-weight: 800;
 }
 
+.text-align {
+  text-align: center;
+}
+
+.w100 {
+  width: 100% !important;
+}
+
 .white {
   color: white;
+}
+
+.black {
+  color: #1f1f1f;
 }
 
 .width {
