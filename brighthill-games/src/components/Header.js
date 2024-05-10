@@ -8,10 +8,15 @@ function Header() {
 
   const match = location.pathname.match(/^\/jobinfo\/(.+)$/);
   const jobTitle = match ? decodeURIComponent(match[1].replace(/-/g, ' ')) : null;
+  const newsArticle = location.pathname.startsWith('/news/article/');
 
   // decide header text based on the current page
   if (match) {
     headerText = `${jobTitle}`;
+  } else if (newsArticle) {
+    const articleTitle = location.pathname.split('/').pop().replace(/-/g, ' ');
+    headerText = articleTitle;
+
   } else {
     // Decide header text based on other pages
     switch (location.pathname) {

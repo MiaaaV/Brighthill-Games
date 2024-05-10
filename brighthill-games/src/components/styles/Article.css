@@ -1,0 +1,38 @@
+.article-container {
+  background-color: #23404D;
+  padding: 60px 0;
+}
+
+.article-container > div {
+  gap: 50px;
+}
+
+.article-container > div > div {
+  grid-gap: 40px;
+}
+
+.article-info {
+  height: 400px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.article-container p,
+.article-info p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+#article-img {
+  object-fit: cover;
+  max-height: 100%;
+  width: 100%;
+}
+
+#back-to-news {
+  gap: 10px;
+}
+
+#back-to-news:hover {
+  text-decoration: underline;
+}
