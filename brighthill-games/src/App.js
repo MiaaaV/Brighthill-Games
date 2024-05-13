@@ -11,6 +11,7 @@ import Game from "./routes/Game";
 import JobInfo from './routes/JobInfo';
 import Article from "./routes/Article";
 import NotFound from "./routes/NotFound";
+import React from 'react';
 import './App.css';
 
 function App() {

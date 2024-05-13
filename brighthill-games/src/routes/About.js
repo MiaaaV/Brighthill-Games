@@ -9,6 +9,7 @@ import John from '../images/about/John.jpg'
 import William from '../images/about/William.jpg'
 import Jenny from '../images/about/Jenny.jpg'
 import Daniel from '../images/about/Daniel.jpg'
+import BackToTopButton from "../components/TopBtn";
 
 function About() {
 
@@ -28,6 +29,7 @@ function About() {
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
       <Header />
 

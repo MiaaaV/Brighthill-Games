@@ -9,6 +9,7 @@ import faqData from '../components/FAQData';
 import Helsinki from '../images/careers/Helsinki.png';
 import Arrow from '../images/icons/arrow.png';
 import { Link } from 'react-router-dom';
+import BackToTopButton from "../components/TopBtn";
 
 function Careers() {
 
@@ -56,27 +57,28 @@ function Careers() {
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
 
       <Header />
 
       <div className="careers-hero">
         <div className="careers-character">
-          <img src={Masterchef} alt={Masterchef} className="careers-character-img"/>
+          <img src={Masterchef} alt={Masterchef} className="careers-character-img" />
         </div>
 
         <div className="careers-text-container">
           <div className="careers-text-box">
             <h2>Why choose Brighthill?</h2>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. 
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim  veniam, quis nostrud exercitation ullamco.
             </h3>
             <h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea  commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea  commodo consequat.
             </h3>
           </div>
         </div>
@@ -89,26 +91,26 @@ function Careers() {
           </div>
 
           <div className="careers-titles-list">
-              <div className="careers-titles-list-container">
-                <button onClick={() => filterJobsByDepartment("Marketing")} className={`filter-button ${activeFilter === "Marketing" ? "active" : ""}`}>
-                  Marketing: {departmentCounts["Marketing"] || 0}
-                </button>
-              </div>
-              <div className="careers-titles-list-container">
-                <button onClick={() => filterJobsByDepartment("Art")} className={`filter-button ${activeFilter === "Art" ? "active" : ""}`}>
-                  Art: {departmentCounts["Art"] || 0}
-                </button>
-              </div>
-              <div className="careers-titles-list-container">
-                <button onClick={() => filterJobsByDepartment("Production")} className={`filter-button ${activeFilter === "Production" ? "active" : ""}`}>
-                  Production: {departmentCounts["Production"] || 0}
-                </button>
-              </div>
-              <div className="careers-titles-list-container">
-                <button onClick={() => filterJobsByDepartment("Game Design")} className={`filter-button ${activeFilter === "Game Design" ? "active" : ""}`}>
-                  Game Design: {departmentCounts["Game Design"] || 0}
-                </button>
-              </div>
+            <div className="careers-titles-list-container">
+              <button onClick={() => filterJobsByDepartment("Marketing")} className={`filter-button ${activeFilter === "Marketing" ? "active" : ""}`}>
+                Marketing: {departmentCounts["Marketing"] || 0}
+              </button>
+            </div>
+            <div className="careers-titles-list-container">
+              <button onClick={() => filterJobsByDepartment("Art")} className={`filter-button ${activeFilter === "Art" ? "active" : ""}`}>
+                Art: {departmentCounts["Art"] || 0}
+              </button>
+            </div>
+            <div className="careers-titles-list-container">
+              <button onClick={() => filterJobsByDepartment("Production")} className={`filter-button ${activeFilter === "Production" ? "active" : ""}`}>
+                Production: {departmentCounts["Production"] || 0}
+              </button>
+            </div>
+            <div className="careers-titles-list-container">
+              <button onClick={() => filterJobsByDepartment("Game Design")} className={`filter-button ${activeFilter === "Game Design" ? "active" : ""}`}>
+                Game Design: {departmentCounts["Game Design"] || 0}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -116,18 +118,18 @@ function Careers() {
           <div className="careers-positions-boxes-scroll" ref={careersPositions}>
 
             <div className="careers-positions-boxes">
-                {filteredJobs.map(job => (
-                  <Link key={job.jobTitle} to={`/jobinfo/${encodeURIComponent(job.jobTitle.replace(/\s+/g, '-'))}`} className="career-position-link">
-                    <div className="careers-positions-boxes-single">
-                      <div className="careers-positions-boxes-single-h2">
-                        <h2>{job.jobTitle}</h2>
-                      </div>
-                      <p>{job.department}</p>
-                      <p>{job.location}</p>
-                      <p>{job.timeType}</p>
+              {filteredJobs.map(job => (
+                <Link key={job.jobTitle} to={`/jobinfo/${encodeURIComponent(job.jobTitle.replace(/\s+/g, '-'))}`} className="career-position-link">
+                  <div className="careers-positions-boxes-single">
+                    <div className="careers-positions-boxes-single-h2">
+                      <h2>{job.jobTitle}</h2>
                     </div>
-                  </Link>
-                ))}
+                    <p>{job.department}</p>
+                    <p>{job.location}</p>
+                    <p>{job.timeType}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -135,17 +137,17 @@ function Careers() {
 
       <div className="careers-helsinki-container">
         <div className="careers-helsinki">
-          <img src={Helsinki} alt="Aerial footage of Helsinki" className="careers-helsinki-img"/>
+          <img src={Helsinki} alt="Aerial footage of Helsinki" className="careers-helsinki-img" />
         </div>
 
         <div className="careers-lorem-text">
           <h2>Lorem ipsum dolor sit amet</h2>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim  veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ea  commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate 
-            velit esse cillum dolore eu fugiat nulla pariatur. 
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim  veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea  commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur.
             Sed ut perspiciatis unde omnis iste natus error.
           </h3>
         </div>
@@ -159,12 +161,12 @@ function Careers() {
               <button className="careers-accordion-btn" onClick={() => toggleAccordion(index)}>
                 <div>
                   <h3>{item.question}</h3>
-                  <img className={`careers-arrow-icon ${openIndex === index ? 'rotate-icon' : ''}`} 
-                  src={Arrow} 
-                  alt="Arrow icon"/>
+                  <img className={`careers-arrow-icon ${openIndex === index ? 'rotate-icon' : ''}`}
+                    src={Arrow}
+                    alt="Arrow icon" />
                 </div>
               </button>
-              
+
               <div className="careers-accordion-content">
                 <p>{item.answer}</p>
               </div>

@@ -7,11 +7,13 @@ import "../components/styles/Reusables.css";
 import "../App.css";
 import { Link } from "react-router-dom";
 import newsData from "../components/NewsData";
+import BackToTopButton from "../components/TopBtn";
 
 function News() {
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
       <Header />
 

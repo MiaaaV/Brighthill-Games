@@ -15,6 +15,7 @@ import Banner2 from '../images/games/Extopia/Extopia_card.png';
 import Banner3 from '../images/games/CD/CD_card.png';
 import Banner4 from '../images/games/DoA/DoA_card.png';
 import Recruit from '../images/backgrounds/fp-recruit.png';
+import BackToTopButton from "../components/TopBtn";
 
 function Home() {
 
@@ -56,6 +57,7 @@ function Home() {
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
 
       <div className="main-container">

@@ -13,6 +13,7 @@ import Solaris from '../images/games/SolarisSurge/Solaris_Surge.png';
 import DoA from '../images/games/DoA/DoA.png';
 import PoT from '../images/games/PoT/PoT.png';
 import ADS from '../images/games/ADS.png';
+import BackToTopButton from "../components/TopBtn";
 
 function Games() {
 
@@ -27,6 +28,7 @@ function Games() {
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
       <div className="games-hero-content">
         <div className="textstuff">
