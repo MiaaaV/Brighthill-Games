@@ -21,14 +21,17 @@ function Home() {
   const newsData = [
     {
       title: 'EoD - Behind the scenes',
+      link: '/news/article/EoD-Behind-the-scenes',
       image: News1
     },
     {
       title: 'Making lady Veronica',
+      link: '/news/article/Making-lady-Veronica',
       image: News2
     },
     {
       title: '2024 Awards nominee',
+      link: '/news/article/2024-Awards-nominee',
       image: News3
     }
   ];
@@ -65,7 +68,7 @@ function Home() {
               <p>Will you unravel the secrets that have remained hidden for decades, or will you become another victim of Brighthill’s haunting legacy?</p>
             </div>
 
-            <Link to="/Echoes-of-Desolation">
+            <Link to="/game/Echoes-of-Desolation">
               <button id="btn">Learn more</button>
             </Link>
           </div>
@@ -80,7 +83,7 @@ function Home() {
 
           <div className="recent-content grid-3-1">
             {newsData.map((news, index) => (
-              <Link to="/news" key={index}>
+              <Link to={news.link} key={index}>
                 <div className="flex-col">
                   <img className="recent-img" src={news.image} alt="News content" />
                   <div className="recent-text-box flex-col">
