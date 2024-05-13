@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
@@ -8,6 +9,7 @@ import John from '../images/about/John.jpg'
 import William from '../images/about/William.jpg'
 import Jenny from '../images/about/Jenny.jpg'
 import Daniel from '../images/about/Daniel.jpg'
+import BackToTopButton from "../components/TopBtn";
 
 function About() {
 
@@ -27,6 +29,7 @@ function About() {
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
       <Header />
 
@@ -85,7 +88,10 @@ function About() {
 
           <div className="flex-row flex-between col-12">
             <p className="font-2 col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices, purus id vestibulum gravida, lacus sem hendrerit justo, et lobortis risus quam nec elit. Ut sed mi vehicula, eleifend metus et, ultrices tortor.</p>
-            <button id="btn">work with us</button>
+
+            <Link to="/careers">
+              <button id="btn">work with us</button>
+            </Link>
           </div>
         </div>
 

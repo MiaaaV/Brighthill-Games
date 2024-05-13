@@ -10,6 +10,7 @@ import '../components/styles/Reusables.css';
 import Rarr from '../images/icons/rarr.png';
 import Modal from '../components/VideoModal';
 import { FaAngleDown } from "react-icons/fa";
+import BackToTopButton from "../components/TopBtn";
 
 function Game() {
 
@@ -38,6 +39,7 @@ function Game() {
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
 
       <div className="main-game-div"

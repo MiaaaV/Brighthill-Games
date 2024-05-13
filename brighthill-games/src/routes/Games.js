@@ -13,20 +13,22 @@ import Solaris from '../images/games/SolarisSurge/Solaris_Surge.png';
 import DoA from '../images/games/DoA/DoA.png';
 import PoT from '../images/games/PoT/PoT.png';
 import ADS from '../images/games/ADS.png';
+import BackToTopButton from "../components/TopBtn";
 
 function Games() {
 
   const games = [
-    { name: "Echoes of Desolation", image: EOD, alt: "Echoes of Desolation icon" },
-    { name: "Celestial Descent: Age of Dragons", image: CD, alt: "Celestial Descent icon" },
+    { name: "Echoes-of-Desolation", image: EOD, alt: "Echoes of Desolation icon" },
+    { name: "Celestial-Descent-Age-of-Dragons", image: CD, alt: "Celestial Descent icon" },
     { name: "Extopia", image: Extopia, alt: "Extopia icon" },
-    { name: "Solaris Surge", image: Solaris, alt: "Solaris Surge icon" },
-    { name: "Dawn of Arcanum", image: DoA, alt: "Dawn of Arcanum icon" },
-    { name: "Planet of Tomorrow", image: PoT, alt: "Planet of Tomorrow icon" }
+    { name: "Solaris-Surge", image: Solaris, alt: "Solaris Surge icon" },
+    { name: "Dawn-of-Arcanum", image: DoA, alt: "Dawn of Arcanum icon" },
+    { name: "Planet-of-Tomorrow", image: PoT, alt: "Planet of Tomorrow icon" }
   ];
 
   return (
     <>
+      <BackToTopButton />
       <Nav />
       <div className="games-hero-content">
         <div className="textstuff">
@@ -43,7 +45,7 @@ function Games() {
             sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi.”
           </h3>
-          <Link to="/Echoes-of-Desolation">
+          <Link to="/game/Echoes-of-Desolation">
             <button className="accepted-button">CHALLENGE ACCEPTED</button>
           </Link>
         </div>
@@ -64,7 +66,7 @@ function Games() {
 
         <div className="all-games-grid">
           {games.map((game, index) => (
-            <Link to={`/${game.name}`} key={index}>
+            <Link to={`/game/${game.name}`} key={index}>
               <div className="all-games-image-container">
                 <div className="all-games-image-overlay">
                   <span className="all-games-image-overlay-text">Read more</span>

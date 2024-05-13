@@ -10,6 +10,8 @@ import News from "./routes/News";
 import Game from "./routes/Game";
 import JobInfo from './routes/JobInfo';
 import Article from "./routes/Article";
+import NotFound from "./routes/NotFound";
+import React from 'react';
 import './App.css';
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
 
   useEffect(() => {
     // scrolls to desired #id if Link has one, otherwise scrolls to the top of the page
-    if (location.pathname && !location.pathname.includes('/:id')) {
+    if (location.pathname && !location.pathname.includes('/game/:id')) {
       if (location.hash) {
         const targetId = location.hash.substring(1); // removes #
         const targetElement = document.getElementById(targetId);
@@ -47,9 +49,10 @@ function App() {
       <Route path="/careers" element={<Careers />} />
       <Route path="/about" element={<About />} />
       <Route path="/news" element={<News />} />
-      <Route path="/:id" element={<Game />} />
       <Route path="/news/article/:articleId" element={<Article />} />
       <Route path="/jobinfo/:jobTitle" element={<JobInfo />} />
+      <Route path="/game/:id" element={<Game />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }

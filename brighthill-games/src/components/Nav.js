@@ -43,26 +43,27 @@ function Nav() {
 
         <ul className="icon-list">
           <li>
-            <a href="#">
-              <img src={Twitter} id="facebook" className="social-icons" alt="Facebook icon" />
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <img src={Twitter} id="facebook" className="social-icons" alt="Twitter icon" />
             </a>
           </li>
           <li>
-            <a href="#">
-              <img src={Instagram} id="facebook" className="social-icons" alt="Facebook icon" />
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src={Instagram} id="facebook" className="social-icons" alt="Instagram icon" />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <img src={Facebook} id="facebook" className="social-icons" alt="Facebook icon" />
             </a>
           </li>
           <li>
-            <a href="#">
-              <img src={YouTube} id="facebook" className="social-icons" alt="Facebook icon" />
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+              <img src={YouTube} id="facebook" className="social-icons" alt="YouTube icon" />
             </a>
           </li>
         </ul>
+
 
       </header>
     </>
