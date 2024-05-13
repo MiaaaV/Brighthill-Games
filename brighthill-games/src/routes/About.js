@@ -31,7 +31,7 @@ function About() {
       <Header />
 
       <div className="about-container">
-        <div className=" flex-row flex-center col-12">
+        <div className="flex-row flex-center col-12">
           <div className="flex-col col-4 about-hero-content">
             <h2 className="uppercase black">Our story</h2>
             <p className="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.</p>
