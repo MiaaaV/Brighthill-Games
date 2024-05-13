@@ -14,20 +14,10 @@ html {
   font-size: 16px; /* normal font size*/
   background-color: rgb(143, 143, 143);
   color: #f3f3f3;
-}
-
-::-webkit-scrollbar {
-  width: 20px;
-  background-color: #495E57;;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent !important;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #F4CE14;
-  border-radius: 5px;
+    /* For Firefox */
+    overflow-y: scroll;
+    scrollbar-color: #9A7E11 #0A0909;
+    scrollbar-width: thin;
 }
 
 #logo {
