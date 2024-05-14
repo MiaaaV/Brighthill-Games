@@ -89,9 +89,11 @@
     cursor: grab;
     user-select: none;
     padding-bottom: 6vh;
+    scrollbar-color: #f3f3f3 #15272efd !important;
+    
 }
 .careers-positions-boxes-scroll::-webkit-scrollbar {
-    background-color: #15272efd
+    background-color: #15272efd;
 }
 .careers-positions-boxes-scroll::-webkit-scrollbar-thumb {
     background-color: #f3f3f3;
