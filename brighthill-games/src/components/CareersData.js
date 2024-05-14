@@ -48,6 +48,24 @@ const careersData = [
         "location": "Oulu",
         "timeType": "Full Time - Hybrid",
     },
+    {
+        "jobTitle": "Senior VFX Artist",
+        "department": "Art",
+        "location": "Helsinki",
+        "timeType": "Full Time - Hybrid",
+    },
+    {
+        "jobTitle": "Marketing Lead",
+        "department": "Marketing",
+        "location": "Oulu",
+        "timeType": "Full Time - On-Site",
+    },
+    {
+        "jobTitle": "Senior Game Tester",
+        "department": "Game Design",
+        "location": "Helsinki",
+        "timeType": "Full Time - Hybrid",
+    },
 ];
 
 export default careersData;
