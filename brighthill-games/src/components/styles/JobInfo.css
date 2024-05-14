@@ -1,123 +1,76 @@
-.job-info-main {
+.job-info-container {
   background-image: url('../../images/backgrounds/jobinfoBG.png');
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
 }
+
 .job-info-content {
   background-color: #81818123;
-  background-position: center;
-  background-size: cover;
-  width: 46%;
-  height: auto;
-  padding: 8vh 16vh 8vh 16vh;
+  padding: 5vh 50px;
+  gap: 50px;
 }
-#work-with-us {
-  gap: 10px;
-  margin-bottom: 90px;
+
+#job-info-link {
+  align-self: flex-start;
 }
-.job-info-lorem {
-  margin-bottom: 90px;
+
+#job-info-link div {
+  gap: 20px;
 }
-.job-info-lorem p {
-  font-size: 1.125rem;
-  font-weight: 300;
+
+#job-info-link div:hover {
+ text-decoration: underline;
 }
-.job-info-resp-quali {
-  display: flex;
-  letter-spacing: 1px;
-  padding: 0vh 0vh 30vh 0vh;
+
+.job-info-content > div {
+  gap: 95px;
 }
-.job-info-resp-quali h2 {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-weight: 400;
+
+.job-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  overflow: visible;
+  row-gap: 50px;
 }
-.job-info-resp-quali ul {
-  padding: 0vh 0vh 4vh 0vh;
-  word-break: break-all;
+
+#responsibilities {
+  grid-column: 1;
+  grid-row: 1;
+  gap: 20px;
 }
-.job-info-resp-quali li {
-  margin-bottom: 8px;
-  overflow-wrap: break-word;
+
+#qualifications {
+  grid-column: 1;
+  grid-row: 2;
+  gap: 20px;
 }
-.job-info-resp-quali h3 {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  font-weight: 400;
+
+#qualifications,
+#responsibilities li {
+  line-height: 1.6;
 }
+
 .job-info-char-container {
-  margin-right: 340px;
-  padding-left: 8vh;
+  grid-column: 2;
+  grid-row: 1 / 3;
+  position: relative;
 }
-.job-info-char {
+
+.job-info-char-container img {
   position: absolute;
-  top: 66vh;
-  width: 42%;
-  height: auto;
-}
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  max-width: 150%;
+  max-height: auto;
 
-/*------ APPLICATION FORM CSS ------*/
-
-.job-info-form-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.job-info-form-container label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1.125rem;
-}
-.job-info-form-container input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  color: #3f3f3fa8;
-  background-color: #d9d9d9;
-  border: 3px solid #00776186;
-  border-radius: 5px;
-}
-.job-info-form-container input[type="file"] {
-  display: block;
-  width: 50%;
-  padding: 10px;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  color: #3f3f3fa8;
-  background-color: #d9d9d9;
-  border: 3px solid #00776186;
-  border-radius: 5px;
-}
-.job-info-form-container button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding: 10px 50px;
-  background-color: #9A7E11;
-  color: #ffffff;
-  font-size: 1.125rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 /*------ THANK YOU MESSAGE CSS ------*/
 
-.job-info-thank-you {
-  text-align: center;
-}
-.job-info-thank-you h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 50px;
-}
-.job-info-thank-you p {
-  font-size: 1.75rem;
-  padding: 0vh 0vh 10vh 0vh;
+#thank-you {
+  margin-top: 50px;
+  gap: 30px;
+  color: #be9d15;
 }

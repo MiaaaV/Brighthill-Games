@@ -6,7 +6,7 @@ function Header() {
   const location = useLocation();
   let headerText = "";
 
-  const match = location.pathname.match(/^\/jobinfo\/(.+)$/);
+  const match = location.pathname.match(/^\/title\/(.+)$/);
   const jobTitle = match ? decodeURIComponent(match[1].replace(/-/g, ' ')) : null;
   const newsArticle = location.pathname.startsWith('/news/article/');
 

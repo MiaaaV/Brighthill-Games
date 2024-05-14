@@ -1,0 +1,58 @@
+#career-form {
+  margin-top: 50px;
+  gap: 30px;
+}
+
+#career-form label {
+  gap: 10px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+#career-form input {
+  flex: 1;
+  padding: 10px;
+  color: #3f3f3fa8;
+  background-color: #d9d9d9;
+  border-radius: 6px;
+  border: 3px solid #00776186;
+}
+
+form #btn-sm {
+  margin-top: 40px;
+  align-self: center;
+}
+
+#career-form input:focus,
+#career-form input:focus-visible {
+  border: 3px solid #00776186;
+}
+
+.valid-icon,
+.invalid-icon {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.input-with-icon input:not(:placeholder-shown) + .valid-icon,
+.input-with-icon input:not(:placeholder-shown) + .invalid-icon {
+  display: block;
+}
+
+.invalid-icon,
+#star {
+  color: rgb(168, 42, 42);
+}
+
+.valid-icon {
+  color: green;
+}
+
+input.invalid {
+  border-color: rgb(168, 42, 42) !important;
+}

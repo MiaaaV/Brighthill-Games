@@ -119,7 +119,7 @@ function Careers() {
 
             <div className="careers-positions-boxes">
               {filteredJobs.map(job => (
-                <Link key={job.jobTitle} to={`/jobinfo/${encodeURIComponent(job.jobTitle.replace(/\s+/g, '-'))}`} className="career-position-link">
+                <Link key={job.jobTitle} to={`/title/${encodeURIComponent(job.jobTitle.replace(/\s+/g, '-'))}`} className="career-position-link">
                   <div className="careers-positions-boxes-single">
                     <div className="careers-positions-boxes-single-h2">
                       <h2>{job.jobTitle}</h2>
