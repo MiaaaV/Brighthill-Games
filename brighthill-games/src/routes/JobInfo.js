@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import careersData from "../components/CareersData";
 import JobChar from '../images/jobinfo/jobinfoChar.png';
-import Forms from '../components/Forms';
+import Forms from '../components/Forms/Forms';
 import '../components/styles/JobInfo.css';
 import '../components/styles/Reusables.css';
 import BackToTopButton from "../components/TopBtn";
