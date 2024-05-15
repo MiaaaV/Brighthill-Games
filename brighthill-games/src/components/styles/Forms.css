@@ -3,6 +3,10 @@
   gap: 30px;
 }
 
+#career-form > div {
+  gap: 10px;
+}
+
 #career-form label {
   gap: 10px;
 }
@@ -44,8 +48,7 @@ form #btn-sm {
   display: block;
 }
 
-.invalid-icon,
-#star {
+.invalid-icon {
   color: rgb(168, 42, 42);
 }
 
@@ -55,4 +58,17 @@ form #btn-sm {
 
 input.invalid {
   border-color: rgb(168, 42, 42) !important;
+}
+
+.error-placeholder {
+  height: 10px;
+}
+
+.error {
+  opacity: 0;
+}
+
+.error.visible {
+  opacity: 1;
+  color: red;
 }

@@ -1,81 +1,116 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCheck, FaTimes } from "react-icons/fa";
+import ValidateForm from './FormValidation';
 import "./styles/Forms.css";
 import "./styles/Reusables.css";
 
-function Forms({ formData, handleChange, handleFileChange, handleSubmit, submitted }) {
+function Forms({ formData, handleChange, handleFileChange }) {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [isValid, setIsValid] = useState(false);
+  const [errors, setErrors] = useState({ name: "", phone: "", email: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleValidation = (isValid, errors) => {
+    setIsValid(isValid);
+    setErrors(errors);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isValid) {
+      setSubmitted(true);
+    }
+  };
+
   return (
     <>
       {!submitted ? (
         <form id='career-form' onSubmit={handleSubmit} className='flex-col col-12'>
 
-          <label className='font-2 flex-col'>
-            <p>Name <span id="star">*</span></p>
-            <div className="input-with-icon flex">
+          <div className='flex-col'>
+            <label htmlFor='name' className='font-2'>
+              Name <span id='star'>*</span>
+            </label>
+            <div className='input-with-icon flex'>
               <input
-                type="text"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                placeholder="Name"
-                className={formData.fullName && !formData.fullName.match(/^[a-zA-ZåöäÅÖÄ\s-]*$/) ? "invalid" : ""}
+                id='name'
+                type='text'
+                placeholder='John Doe'
+                value={name}
+                onChange={e => setName(e.target.value)}
+                className={name && errors.name ? 'invalid' : ''}
                 required
               />
-              {formData.fullName && (
-                formData.fullName.match(/^[a-zA-ZåöäÅÖÄ\s-]*$/) ? (
+              {name && (
+                !errors.name ? (
                   <FaCheck className="valid-icon" />
                 ) : (
                   <FaTimes className="invalid-icon" />
                 )
               )}
             </div>
-          </label>
+            <div className='error-placeholder'>
+              <p className={`error ${errors.name ? 'visible' : ''}`}>{errors.name}</p>
+            </div>
+          </div>
 
-          <label className='font-2 flex-col'>
-            <p>Phone <span id="star">*</span></p>
-            <div className="input-with-icon flex">
+          <div className='flex-col'>
+            <label htmlFor='phone' className='font-2'>
+              Phone <span id='star'>*</span>
+            </label>
+            <div className='input-with-icon flex'>
               <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Phone"
-                className={formData.phone && !formData.phone.match(/^[\d+ ]*$/) ? "invalid" : ""}
+                id='phone'
+                type='tel'
+                placeholder='+123 45 678 9101'
+                value={phone}
+                onChange={e => setPhone(e.target.value)}
+                className={phone && errors.phone ? 'invalid' : ''}
                 required
               />
-              {formData.phone && (
-                formData.phone.match(/^[\d+ ]*$/) ? (
+              {phone && (
+                !errors.phone ? (
                   <FaCheck className="valid-icon" />
                 ) : (
                   <FaTimes className="invalid-icon" />
                 )
               )}
             </div>
-          </label>
+            <div className='error-placeholder'>
+              <p className={`error ${errors.phone ? 'visible' : ''}`}>{errors.phone}</p>
+            </div>
+          </div>
 
-          <label className='font-2 flex-col'>
-            <p>Email <span id="star">*</span></p>
-            <div className="input-with-icon flex">
+          <div className='flex-col'>
+            <label htmlFor='email' className='font-2'>
+              Email <span id='star'>*</span>
+            </label>
+            <div className='input-with-icon flex'>
               <input
-                type="text"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email"
-                className={formData.email && !formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) ? "invalid" : ""}
+                id='email'
+                type='email'
+                placeholder='John.Doe@gmail.com'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                className={email && errors.email ? 'invalid' : ''}
                 required
               />
-              {formData.email && (
-                formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) ? (
+              {email && (
+                !errors.email ? (
                   <FaCheck className="valid-icon" />
                 ) : (
                   <FaTimes className="invalid-icon" />
                 )
               )}
             </div>
-          </label>
+            <div className='error-placeholder'>
+              <p className={`error ${errors.email ? 'visible' : ''}`}>{errors.email}</p>
+            </div>
+          </div>
 
-          <label className='font-2 flex-col col-6'>
+          <label className='font-2 flex-col col-8'>
             <p>CV (.pdf, .doc, .docx)</p>
             <div className='flex'>
               <input
@@ -103,7 +138,7 @@ function Forms({ formData, handleChange, handleFileChange, handleSubmit, submitt
             </div>
           </label>
 
-          <label className='font-2 flex-col col-6'>
+          <label className='font-2 flex-col col-8'>
             <p> Application letter (.pdf, .doc, .docx)</p>
             <div className='flex'>
               <input
@@ -128,7 +163,13 @@ function Forms({ formData, handleChange, handleFileChange, handleSubmit, submitt
             </div>
           </label>
 
-          <button id='btn-sm' className='col-4' type="submit">Apply</button>
+          <ValidateForm
+            name={name}
+            phone={phone}
+            email={email}
+            onValidation={handleValidation}
+          />
+
         </form>
 
       ) : (
