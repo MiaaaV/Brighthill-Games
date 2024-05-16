@@ -130,6 +130,11 @@ nav = #0A0909;
 .social-icons {
   height: 30px;
   width: 30px;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons:hover {
+  transform: translateY(-2px);
 }
 
 .icon-list {

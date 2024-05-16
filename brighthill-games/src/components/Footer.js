@@ -1,27 +1,27 @@
 import React from 'react';
-import './styles/Footer.css';
-import '../App.css';
 import Facebook from '../images/icons/facebook.png';
 import Instagram from '../images/icons/instagram.png';
 import Twitter from '../images/icons/twitter.png';
 import YouTube from '../images/icons/youtube.png';
+import './styles/Footer.css';
+import './styles/Reusables.css';
+import '../App.css';
 
 function Footer() {
 
   return (
     <>
       <footer>
-        <div className='footer-content'>
+        <div className='flex-row flex-between'>
 
-          <div className='footer-address'>
+          <div className='flex-col'>
             <p>Brighthill Games Oy</p>
             <p>Jokukatu 123</p>
             <p>00100 Helsinki</p>
             <p>Finland</p>
           </div>
 
-          <div className='footer-follow-icons'>
-
+          <div className='flex-row'>
             <div>
               <p>Follow Brighthill Games on</p>
             </div>
@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className='footer-copyright'>
+        <div className='flex-row flex-center'>
           <p>© 2024 Brighthill Games, INC. All rights reserved</p>
         </div>
       </footer>
