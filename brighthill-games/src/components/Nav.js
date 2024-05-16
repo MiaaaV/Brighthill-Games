@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../images/logos/logo-white.png";
 import Twitter from "../images/icons/twitter.png";
@@ -5,8 +6,8 @@ import Instagram from "../images/icons/instagram.png";
 import Facebook from "../images/icons/facebook.png";
 import YouTube from "../images/icons/youtube.png";
 import "./styles/Nav.css";
+import "./styles/Reusables.css";
 import "../App.css";
-import { useEffect, useState } from "react";
 
 function Nav() {
 
@@ -28,16 +29,16 @@ function Nav() {
   return (
     <>
       <header className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
-        <nav>
+        <nav className="flex flex-align flex-between">
           <NavLink to="/">
             <img src={Logo} id="logo" alt="Brighthill Games logo" />
           </NavLink>
 
-          <ul>
-            <li className="nav-link"><NavLink to="/games">Games</NavLink></li>
-            <li className="nav-link"><NavLink to="/careers">Work with us</NavLink></li>
-            <li className="nav-link"><NavLink to="/about">About</NavLink></li>
-            <li className="nav-link"><NavLink to="/news">News</NavLink></li>
+          <ul className="flex-row">
+            <li className="nav-link font-2"><NavLink to="/games">Games</NavLink></li>
+            <li className="nav-link font-2"><NavLink to="/careers">Work with us</NavLink></li>
+            <li className="nav-link font-2"><NavLink to="/about">About</NavLink></li>
+            <li className="nav-link font-2"><NavLink to="/news">News</NavLink></li>
           </ul>
         </nav>
 

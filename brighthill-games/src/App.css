@@ -4,11 +4,6 @@
   font-family: 'Merriweather', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 html {
   scroll-behavior: smooth;
   font-size: 16px; /* normal font size*/
@@ -20,58 +15,12 @@ html {
     scrollbar-width: thin;
 }
 
-#logo {
-  width: 161px;
-  height: 60px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 a.hover,
 a.active {
   color: #9A7E11;
-}
-
-/* SOCIAL MEDIA ICONS*/
-
-.social-icons {
-  height: 30px;
-  width: 30px;
-}
-
-.icon-list {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  gap: 15px;
-}
-
-#btn {
-  background-color: #9A7E11;
-  font-size: 1.25rem; /* 20px */
-  color: #f3f3f3;
-  padding: 20px 50px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border: none;
-    transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-#btn-sm {
-  margin-top: 20px;
-  background-color: #9A7E11;
-  font-size: 1.125rem; /* 18px */
-  color: #f3f3f3;
-  padding: 15px 25px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border: none;
-    transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-#btn:hover,
-#btn-sm:hover {
-  background-color: #5C4C0E;
-  color: #8C8C8C;
-  cursor: pointer;
 }
