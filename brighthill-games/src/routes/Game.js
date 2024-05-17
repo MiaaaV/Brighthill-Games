@@ -42,29 +42,31 @@ function Game() {
       <BackToTopButton />
       <Nav />
 
-      <div className="main-game-div"
+      <div className="main-game-div flex flex-center"
         style={{ backgroundImage: `url(${game.background})` }} >
 
-        <div className="grid-container col-9">
+        <div className="grid-container grid-2-1 col-8">
 
           <div className="grid-item flex-col">
-            <img id="game-name" src={game.name} alt="Game name" />
+            <img id="game-name" className="col-12" src={game.name} alt="Game name" />
 
-            <p className="grid-text">{game.description1}</p>
-            <p className="grid-text">{game.description2}</p>
+            <div>
+              <p className="grid-text">{game.description1}</p>
+              <p className="grid-text">{game.description2}</p>
 
-            {game.id === "Echoes-of-Desolation" && (
-              <button id="btn-sm" onClick={() => setIsModalOpen(true)}>
-                Watch Trailer
-              </button>)}
-
+              {game.id === "Echoes-of-Desolation" && (
+                <button id="btn-sm" onClick={() => setIsModalOpen(true)}>
+                  Watch Trailer
+                </button>
+              )}
+            </div>
           </div>
 
           <div className="flex-row flex-center">
-            <img id="game-img" src={game.banner} alt="Game" />
+            <img className="filler-img" src={game.banner} alt="Game" />
           </div>
 
-          <div className="flex-row flex-center">
+          <div className="game-img-div flex-row flex-center">
             <img className="filler-img" src={game.filler_img_1} alt="Game" />
           </div>
 
@@ -82,7 +84,7 @@ function Game() {
             <p className="grid-text">{game.filler_text_2}</p>
           </div>
 
-          <div className="flex-row flex-center">
+          <div className="game-img-div flex-row flex-center">
             <img className="filler-img" src={game.filler_img_2} alt="Game" />
           </div>
 
@@ -93,7 +95,7 @@ function Game() {
           <div className="grid-item">
             <div className="accordion-item col-12">
               <button className="accordion-btn">
-                <div className="flex-align">
+                <div className="flex flex-between flex-align w100">
                   <h3 className="white" style={{ marginLeft: "20px" }}>overview</h3>
                   <FaAngleDown id="arr-icon" className={`white ${isAccordionOpen ? 'rotate-icon' : ''}`} />
                 </div>
@@ -142,12 +144,12 @@ function Game() {
 
       </div >
 
-      <div className="similar-games-container flex-col">
+      <div className="similar-games-container flex-col flex-align col-12">
         <div>
           <h2 className="uppercase">more games like {game.title}</h2>
         </div>
 
-        <div className="link-content flex">
+        <div className="link-content flex flex-align">
           <Link to={game.link_1}>
             <img id="game-link" className="width" src={game.more_1} alt="similar game" />
           </Link>
@@ -157,7 +159,7 @@ function Game() {
           </Link>
 
           <Link id="all-games-link" to="/games#all-games">
-            <div>
+            <div className="flex flex-align">
               <h2 className="uppercase white">all games</h2>
               <img id="rarr" src={Rarr} alt="arrow icon" />
             </div>

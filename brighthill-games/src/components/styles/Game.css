@@ -5,9 +5,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .main-game-div::before {
@@ -16,40 +13,39 @@
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  margin-top: 20vh;
+  margin-top: 25vh;
+  padding-bottom: 5vh;
   row-gap: 100px;
+  column-gap: 50px;
 }
 
 .grid-item {
-  display: flex;
   justify-content: space-around;
-  padding: 40px;
   align-items: flex-start;
 }
 
-.grid-item:last-of-type {
-  padding: 40px 0;
-}
-
 #game-name {
-  max-width: 60%;
+  align-self: flex-start;
+  width: 100%;
+  height: auto;
 }
 
 .grid-text {
   margin-top: 10px;
   text-align: justify;
   line-height: 1.5;
-  width: 80%;
 }
 
-#game-img {
-  width: 100%;
+.game-img-div {
+  overflow: hidden;
+  height: 350px;
+  align-items: stretch;
 }
 
 .filler-img {
-  width: 70%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* OVERVIEW */
@@ -62,12 +58,6 @@
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-
-.accordion-btn div {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
 
 #arr-icon {
@@ -98,23 +88,16 @@
 /* SIMILAR GAMES */
 
 .similar-games-container {
-  max-width: 100%;
-  padding: 50px;
+  padding: 50px 0;
   gap: 50px;
-  align-items: center;
   background-color: #272727;
 }
 
 .link-content {
-  max-width: 100%;
-  align-items: center;
-  justify-content: center;
   gap: 50px;
 }
 
 #all-games-link div {
-  display: flex;
-  align-items: center;
   gap: 10px;
 }
 
