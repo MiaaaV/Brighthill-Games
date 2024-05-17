@@ -11,3 +11,7 @@ footer > div > div.flex-row {
 footer div.flex-col {
     gap: 5px;
 }
+
+footer > div:last-child {
+    margin-top: 10px;
+}
