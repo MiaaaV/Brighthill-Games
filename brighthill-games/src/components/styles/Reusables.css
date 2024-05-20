@@ -57,6 +57,10 @@ nav = #0A0909;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.grid-auto-minmax-250-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -104,6 +108,11 @@ nav = #0A0909;
   font-size: 1.125rem; /* 18px */
 }
 
+
+.font-3 {
+  font-size: 1.25rem; /* 20px */
+}
+
 .font-3 {
   font-size: 1.25rem; /* 20px */
 }
@@ -133,7 +142,6 @@ nav = #0A0909;
   3rem = 48px
 
 */
-
 
 /* RESPONSIVE COLS */
 
