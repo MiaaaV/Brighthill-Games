@@ -62,7 +62,7 @@ function Careers() {
 
       <Header />
 
-      <div className="careers-hero">
+      <div className="careers-hero flex-row">
         <div className="careers-character">
           <img src={Masterchef} alt={Masterchef} className="careers-character-img" />
         </div>
@@ -135,9 +135,9 @@ function Careers() {
         </div>
       </div>
 
-      <div className="careers-helsinki-container">
+      <div className="careers-helsinki-container flex-row">
         <div className="careers-helsinki">
-          <img src={Helsinki} alt="Aerial footage of Helsinki" className="careers-helsinki-img" />
+          <img src={Helsinki} alt="Aerial footage of Helsinki" className="careers-helsinki-img col-12" />
         </div>
 
         <div className="careers-lorem-text">
@@ -161,9 +161,10 @@ function Careers() {
               <button className="careers-accordion-btn" onClick={() => toggleAccordion(index)}>
                 <div>
                   <h3>{item.question}</h3>
-                  <img className={`careers-arrow-icon ${openIndex === index ? 'rotate-icon' : ''}`}
-                    src={Arrow}
-                    alt="Arrow icon" />
+                    <img className={`careers-arrow-icon ${openIndex === index ? 'rotate-icon' : ''}`}
+                      src={Arrow}
+                      alt="Arrow icon" 
+                    />
                 </div>
               </button>
 

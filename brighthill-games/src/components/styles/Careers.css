@@ -6,9 +6,11 @@
     background-size: cover;
     background-position: center;
     background-color: rgb(0, 0, 0, 0.5);
-    display: flex;
-    padding: 0vh 22vh 0vh 14vh;
-    gap: 170px;
+    padding: 0vh 10vw;
+    text-align: center;
+}
+.careers-character {
+    flex: 0 0 auto;
 }
 .careers-character-img {
     height: auto;
@@ -17,21 +19,20 @@
     margin-top: 5vh;
 }
 .careers-text-container {
-    justify-content: center;
-    align-content: center;
+    margin-left: 6vw;
 }
 .careers-text-box {
     background-color: #e9e9e9a9;
-    padding: 10vh 8vh 10vh 8vh;
-    text-align: center;
+    padding: 8vh 5vw;
     color: #1f1f1f;
     border-radius: 3px;
 }
 .careers-text-box h2 {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 2rem;
 }
 .careers-text-box h3 {
+    font-size: 1.125rem;
     font-weight: 600;
     margin-top: 4vh;
     line-height: 1.5em;
@@ -43,14 +44,14 @@
     background-image: url('../../images/backgrounds/Currentjobsbg.png');
     background-size: cover;
     background-position: center;
-    padding: 10vh 0 10vh 0;
+    padding: 10vh 2vw;
 }
 .careers-jobs-open {
     text-align: center;
 }
 .careers-jobs-open h2 {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -58,17 +59,19 @@
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .careers-titles-list-container button {
     background-color: #927243;
-    padding: 2vh 6vh 2vh 6vh;
+    padding: 2vh 6vh;
     border-radius: 3px;
     border: none;
     font-size: 1.125rem;
     color: #f3f3f3;
     cursor: pointer;
     transition: background-color 0.4s ease;
+    flex: 1 1 auto;
 }
 .careers-titles-list-container button:hover {
     background-color: #695230; /* #725934 */
@@ -141,22 +144,29 @@
 
 .careers-helsinki-container {
     background-color: #23404D;
-    display: flex;
-    align-items: center;
-    padding: 8vh 22vh 8vh 22vh;
-    gap: 100px;
+    padding: 5vh 10vw;
+    gap: 5vw;
+    flex-wrap: wrap;
+}
+.careers-helsinki {
+    flex: 1;
+}
+.careers-helsinki-img {
+    max-width: 100%;
+    height: auto;
 }
 .careers-lorem-text {
     text-align: center;
+    flex: 1;
 }
 .careers-lorem-text h2 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 .careers-lorem-text h3 {
-    margin-top: 54px;
+    margin-top: 2.5rem;
     font-weight: 300;
     line-height: 1.5em;
 }
@@ -190,11 +200,13 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 .careers-accordion-btn h3 {
     font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;
+    padding-right: 24px;
 }
 .careers-accordion-content {
     display: none;
@@ -218,4 +230,128 @@
 }
 .rotate-icon {
     transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1293px) {
+    .careers-hero {
+        padding: 6vh 14vw;
+    }
+    .careers-character-img {
+        display: none;
+    }
+    .careers-text-container {
+        margin-left: 0;
+    }
+
+    /*------ FAQ ------*/
+    
+    .careers-accordion-btn div {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    .careers-helsinki-container {
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    .careers-jobs {
+        padding: 8vh 2vw
+    }
+    .careers-jobs-open h2 {
+        font-size: 1.8rem;
+    }
+    .careers-titles-list-container button {
+        padding: 2vh 4vh;
+        font-size: 1rem;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .careers-jobs {
+        padding: 6vh 2vw;
+    }
+    .careers-jobs-open h2 {
+        font-size: 1.6rem;
+    }
+    .careers-titles-list {
+        gap: 10px;
+    }
+    .careers-titles-list-container button {
+        padding: 1.5vh 3vh;
+        font-size: 1rem;
+    }
+
+    /*------ HELSINKI ------*/
+
+    .careers-lorem-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    /*------ FAQ ------*/
+
+    .careers-faq-container {
+        padding: 4vh 1vh 6vh 1vh;
+    }
+    .careers-faq-container h2 {
+        font-size: 1.8rem;
+    }
+    .careers-faq-list {
+        padding: 0vh 5vh 0vh 5vh;
+        margin-top: 30px;
+    }
+    .careers-accordion-btn {
+        padding: 2vh 1vh 2vh 1vh;
+    }
+    .careers-accordion-btn h3 {
+        font-size: 1.2rem;
+    }
+    .careers-accordion-content {
+        padding: 20px 10px;
+    }
+    .careers-accordion-content p {
+        font-size: 1.2rem;
+    }
+    .careers-arrow-icon {
+        width: 20px;
+        margin-right: 0;
+        align-self: flex-start;
+        border: 3px solid #1f1f1fd7;
+    }
+}
+@media screen and (max-width: 626px) {
+    .careers-jobs {
+        padding: 4vh 1vw;
+    }
+    .careers-jobs-open h2 {
+        font-size: 1.4rem;
+    }
+    .careers-jobs-titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .careers-titles-list {
+        flex-direction: column;
+    }
+    .careers-titles-list-container {
+        width: 100%;
+    }
+    .careers-titles-list-container button {
+        width: 100%;
+        padding: 2vh 10vh;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .careers-jobs {
+        padding: 4vh 1vw;
+    }
+    .careers-titles-list-container button {
+        padding: 2vh 8vh;
+        font-size: 0.8rem;
+    }
 }
