@@ -30,57 +30,57 @@ function Games() {
     <>
       <BackToTopButton />
       <Nav />
-      <div className="games-hero-content">
-        <div className="textstuff">
 
-          <ul className="star-icon-list">
+      <div className="games-hero-content flex-align flex-center">
+
+        <div className="text-align flex-col col-5">
+          <ul className="flex-row flex-center">
             {[...Array(4)].map((_) => (
               <img src={Star} alt="Star icon" className="star-icon" />
             ))}
           </ul>
 
-          <h2 className="title-text">
-            ARE YOU AFRAID OF <span className="title-text-color">THE DARK?</span></h2>
-          <h3 className="title-text-lorem">“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          <h2 className="heading-2">
+            ARE YOU AFRAID OF <span>THE DARK?</span>
+          </h2>
+
+          <h3 className="font-3">“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi.”
           </h3>
+
           <Link to="/game/Echoes-of-Desolation">
-            <button className="accepted-button">CHALLENGE ACCEPTED</button>
+            <button id="challenge-btn">CHALLENGE ACCEPTED</button>
           </Link>
         </div>
 
-        <div className="character-image">
+        <div className="flex col-5">
           <img src={Character} id="character" alt="Character" className="character" />
         </div>
 
       </div>
 
-      <div id="all-games" className="all-games-container">
-
-        <div className="all-games-bg"></div>
-
-        <div className="all-games-title-container">
-          <h1 className="all-games-title">ALL GAMES</h1>
+      <div id="all-games" className="all-games-container flex-col flex-align">
+        <div>
+          <h1>ALL GAMES</h1>
         </div>
 
-        <div className="all-games-grid">
+        <div className="grid-3-1 col-8">
           {games.map((game, index) => (
             <Link to={`/game/${game.name}`} key={index}>
-              <div className="all-games-image-container">
-                <div className="all-games-image-overlay">
-                  <span className="all-games-image-overlay-text">Read more</span>
+              <div className="all-games-image-container flex col-12">
+                <div className="all-games-overlay flex-align flex-center w100">
+                  <span>Read more</span>
                 </div>
-                <img src={game.image} alt={game.alt} className="all-games-image" />
+                <img className="w100" src={game.image} alt={game.alt} />
               </div>
             </Link>
           ))}
         </div>
-
       </div>
 
-      <div className="ad">
-        <img src={ADS} alt="AD banner" className="ad-image" />
+      <div className="flex">
+        <img src={ADS} alt="AD banner" className="w100" />
       </div>
       <Footer />
     </>

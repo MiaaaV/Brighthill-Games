@@ -2,46 +2,40 @@
 /*------ HERO CSS ------ */
 
 .games-hero-content {
-    display: flex;
-    gap: 100px;
-    align-items: center;
-    padding: 20vh 30vh 0 30vh;
+    padding: 20vh 0 0 0;
     background-image: url('../../images/backgrounds/Bannerbg.jpg');
     background-size: cover;
     background-position: center;
 }
-.textstuff {
-    text-align: center;
-    margin-top: 30px;
+
+.games-hero-content > div {
+    gap: 50px;
 }
-.star-icon-list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+
+.games-hero-content > div ul {
     gap: 10px;
-    justify-content: center;
 }
+
 .star-icon {
     height: 20px;
     width: 20px;
-    margin-bottom: 30px;
     opacity: 65%;
 }
-.title-text {
-    font-size: 30px;
+
+.games-hero-content > div h2 {
     font-weight: 400;
-    margin-bottom: 50px;
 }
-.title-text-color {
+
+.games-hero-content > div span {
     color: #A7955B;
 }
-.title-text-lorem {
-    font-size: 20px;
+
+.games-hero-content > div h3 {
     font-weight: 400;
     font-style: italic;
-    margin-bottom: 50px;
 }
-.accepted-button {
+
+#challenge-btn {
     padding: 20px 50px;
     font-size: 20px;
     font-weight: 400;
@@ -54,14 +48,13 @@
     background-color: rgba(255, 255, 255, 0);
     transition: background-color 0.4s ease, color 0.4s ease;
 }
-.accepted-button:hover {
+
+#challenge-btn:hover {
     background-color: #5C4C0E;
     color: #8C8C8C;
     cursor: pointer;
 }
-.character-image {
-    display: flex;
-}
+
 .character {
     height: auto;
     width: 600px;
@@ -70,80 +63,48 @@
 /*------ ALL GAMES CSS ------*/
 
 .all-games-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.all-games-bg {
+    gap: 50px;
+    padding: 10vh 0;
     background-image: url('../../images/backgrounds/Games_background.png');
+    background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
 }
-.all-games-title-container {
-    align-items: center;
-    padding: 4vh 2vh 2vh 2vh;
+
+.all-games-container > div:nth-child(2) {
+    grid-gap: 50px;
 }
-.all-games-title {
-    text-align: center;
-}
-.all-games-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px;
-    padding: 5vh 30vh 10vh 30vh;
-    justify-content: center;
-}
+
 .all-games-image-container {
     position: relative;
-    display: inline-block;
 }
-.all-games-image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.all-games-image-overlay {
+
+.all-games-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease, transform 0.4s ease; /* Smooth transition for the opacity property */
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.4s ease;
 }
-.all-games-image-overlay-text {
+
+.all-games-overlay span {
     color: #f3f3f3;
     font-size: 1vw;
     font-weight: 400;
-    margin-top: 15vh;
+    margin-top: 150px;
     text-decoration: underline;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.4s ease;
-} 
-.all-games-image-container:hover .all-games-image-overlay {
+}
+
+.all-games-image-container:hover .all-games-overlay {
     opacity: 1;
 }
-.all-games-image-container:hover .all-games-image-overlay-text {
+
+.all-games-image-container:hover .all-games-overlay span {
     opacity: 0.9;
     transform: translateY(100%);
-}
-  
-
-/*------ AD ------*/
-
-.ad {
-    align-items: center;
-    margin-bottom: -4px;
-}
-.ad-image {
-    width: 100%;
-    height: auto;
 }
