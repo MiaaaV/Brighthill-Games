@@ -11,17 +11,17 @@ function Footer() {
 
   return (
     <>
-      <footer>
+      <footer className='desktop-footer'>
         <div className='flex-row flex-between'>
 
-          <div className='flex-col'>
+          <div className='desktop-contact-info flex-col'>
             <p>Brighthill Games Oy</p>
             <p>Jokukatu 123</p>
             <p>00100 Helsinki</p>
             <p>Finland</p>
           </div>
 
-          <div className='flex-row'>
+          <div className='desktop-follow flex-row'>
             <div>
               <p>Follow Brighthill Games on</p>
             </div>
@@ -48,11 +48,10 @@ function Footer() {
                 </a>
               </li>
             </ul>
-
           </div>
         </div>
 
-        <div className='flex-row flex-center'>
+        <div className='desktop-copyright flex-row flex-center'>
           <p>© 2024 Brighthill Games, INC. All rights reserved</p>
         </div>
       </footer>

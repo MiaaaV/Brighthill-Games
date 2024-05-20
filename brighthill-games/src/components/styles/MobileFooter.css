@@ -1,0 +1,25 @@
+.mobile-footer {
+  background-color: #1f1f1f;
+  padding: 40px 0 20px 0;
+  gap: 40px;
+}
+
+#mobile-footer-logo {
+  max-width: 100%;
+}
+
+.mobile-footer > div >div.flex-col {
+  gap: 5px;
+}
+
+.mobile-footer > div:nth-child(2) {
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+
+  .mobile-footer {
+    display: none;
+  }
+
+}

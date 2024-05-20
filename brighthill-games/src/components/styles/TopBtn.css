@@ -17,3 +17,9 @@
 .back-to-top-button.visible {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .back-to-top-button {
+      display: none;
+  }
+}

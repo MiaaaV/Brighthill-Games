@@ -18,6 +18,7 @@ import "../components/styles/Reusables.css";
 import "../App.css";
 import "../assets/fonts/fonts.css";
 import careersData from '../components/CareersData'; // Import the careers data
+import MobileFooter from '../components/MobileFooter';
 
 function Home() {
 
@@ -148,6 +149,7 @@ function Home() {
       </div>
 
       <Footer />
+      <MobileFooter />
     </>
   )
 }

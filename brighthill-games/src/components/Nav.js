@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { BiMenu, BiX } from "react-icons/bi";
 import Logo from "../images/logos/logo-white.png";
 import Twitter from "../images/icons/twitter.png";
 import Instagram from "../images/icons/instagram.png";
 import Facebook from "../images/icons/facebook.png";
 import YouTube from "../images/icons/youtube.png";
+import MobileFooter from './MobileFooter';
 import "./styles/Nav.css";
 import "./styles/Reusables.css";
 import "../App.css";
 
 function Nav() {
-
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,15 @@ function Nav() {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    if (!menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  };
+
   return (
     <>
       <header className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
@@ -34,7 +45,9 @@ function Nav() {
             <img src={Logo} id="logo" alt="Brighthill Games logo" />
           </NavLink>
 
-          <ul className="flex-row">
+          <BiMenu id="burger-menu" onClick={toggleMenu} />
+
+          <ul className="desktop-ul flex-row">
             <li className="nav-link font-2"><NavLink to="/games">Games</NavLink></li>
             <li className="nav-link font-2"><NavLink to="/careers">Work with us</NavLink></li>
             <li className="nav-link font-2"><NavLink to="/about">About</NavLink></li>
@@ -42,33 +55,56 @@ function Nav() {
           </ul>
         </nav>
 
-        <ul className="icon-list">
+        <ul className="desktop-ul icon-list">
           <li>
             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={Twitter} id="facebook" className="social-icons" alt="Twitter icon" />
+              <img src={Twitter} className="social-icons" alt="Twitter icon" />
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src={Instagram} id="facebook" className="social-icons" alt="Instagram icon" />
+              <img src={Instagram} className="social-icons" alt="Instagram icon" />
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={Facebook} id="facebook" className="social-icons" alt="Facebook icon" />
+              <img src={Facebook} className="social-icons" alt="Facebook icon" />
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src={YouTube} id="facebook" className="social-icons" alt="YouTube icon" />
+              <img src={YouTube} className="social-icons" alt="YouTube icon" />
             </a>
           </li>
         </ul>
 
+        {/* MOBILE OVERLAY */}
+
+        <div className={`overlay ${menuOpen ? 'overlay-open' : ''}`}>
+
+          <nav id="mobile-nav" className="flex flex-align flex-between">
+            <NavLink to="/">
+              <img src={Logo} id="logo" alt="Brighthill Games logo" />
+            </NavLink>
+
+            <BiX id="close-menu" onClick={toggleMenu} />
+          </nav>
+
+          <div>
+            <ul className="mobile-ul text-align">
+              <li className="nav-link uppercase"><NavLink to="/games">Games</NavLink></li>
+              <li className="nav-link uppercase"><NavLink to="/careers">Work with us</NavLink></li>
+              <li className="nav-link uppercase"><NavLink to="/about">About</NavLink></li>
+              <li className="nav-link uppercase"><NavLink to="/news">News</NavLink></li>
+            </ul>
+          </div>
+
+          <MobileFooter />
+        </div>
 
       </header>
     </>
-  )
+  );
 }
 
 export default Nav;

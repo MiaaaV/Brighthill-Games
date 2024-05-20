@@ -1,17 +1,23 @@
-footer {
+.desktop-footer {
     background-color: #1f1f1f;
     padding: 20px 50px;
     align-items: center;
 }
 
-footer > div > div.flex-row {
+.desktop-follow {
     gap: 20px;
 }
 
-footer div.flex-col {
+.desktop-contact-info {
     gap: 5px;
 }
 
-footer > div:last-child {
+.desktop-copyright {
     margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .desktop-footer {
+        display: none;
+    }
 }
