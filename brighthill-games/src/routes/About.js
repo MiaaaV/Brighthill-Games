@@ -68,7 +68,7 @@ function About() {
         <div className="flex-col flex-align flex-center col-12">
           <h2 className="heading-2 uppercase black">Meet our bright team</h2>
 
-          <div className="team-map grid-4-1 col-8">
+          <div className="team-map grid-auto-minmax-250-1 col-8">
             {teamMembers.map((member, index) => (
               <div className="w100 flex-col" key={index}>
                 <div className="team-img-container flex-col flex-align">
