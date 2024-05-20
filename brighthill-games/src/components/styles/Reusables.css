@@ -104,6 +104,10 @@ nav = #0A0909;
   font-size: 1.125rem; /* 18px */
 }
 
+.font-3 {
+  font-size: 1.25rem; /* 20px */
+}
+
 /* REM LIST 
 
   1rem = 16px
@@ -130,9 +134,6 @@ nav = #0A0909;
 
 */
 
-.font-3 {
-  font-size: 1.25rem; /* 20px */
-}
 
 /* RESPONSIVE COLS */
 
