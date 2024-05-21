@@ -1,0 +1,87 @@
+@media screen and (max-width: 1200px) {
+  /*------ HERO CSS ------*/
+  
+  .character {
+      display: none;
+  }
+  .games-hero-content {
+      padding: 36vh 0 18vh 0;
+      flex-direction: column;
+  }
+  .games-hero-content > div {
+      width: 50%;
+  }
+
+  /*------ ALL GAMES CSS ------*/
+
+  .all-games-container > div:nth-child(2) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+  }
+  .all-games-overlay {
+      display: none;
+  }
+  .all-games-overlay span {
+      display: none;
+  }
+  
+}
+@media screen and (max-width: 900px) {
+  /*------ HERO CSS ------*/
+
+  .games-hero-content {
+      padding: 33vh 0 15vh 0;
+  }
+  .games-hero-content > div {
+      width: 58.33%;
+  }
+
+  /*------ ALL GAMES CSS ------*/
+  .all-games-container {
+      padding: 8vh 0;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  /*------ HERO CSS ------*/
+
+  .games-hero-content {
+      padding: 12vh 0 12vh 0;
+  }
+  .games-hero-content > div {
+      width: 75%;
+      text-align: center;
+  }
+  .games-hero-content > div h2 {
+      font-size: 1.5rem;
+  }
+  .games-hero-content > div h3 {
+      font-size: 1rem;
+  }
+  #challenge-btn {
+      padding: 10px 30px;
+      font-size: 16px;
+  }
+
+  /*------ ALL GAMES CSS ------*/
+
+  .all-games-container {
+      padding: 6vh 0;
+  }
+  .all-games-container h1 {
+      font-size: 1.9rem;
+  }
+
+}
+@media screen and (max-width: 480px) {
+  /*------ ALL GAMES CSS ------*/
+
+  .all-games-container h1 {
+      font-size: 1.8rem;
+  }
+  .all-games-container > div:nth-child(2) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+  }
+  
+}

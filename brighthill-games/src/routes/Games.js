@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import '../components/styles/Games.css';
+import '../components/styles/MediaQueries/GamesQuery.css'
 import '../App.css';
 import Star from '../images/icons/star.png';
 import Character from '../images/games/char2.png';
