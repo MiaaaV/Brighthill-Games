@@ -24,3 +24,13 @@ a.hover,
 a.active {
   color: #9A7E11;
 }
+
+@media (max-width: 768px) {
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}

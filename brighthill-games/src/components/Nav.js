@@ -30,11 +30,10 @@ function Nav() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    if (!menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -87,7 +86,7 @@ function Nav() {
               <img src={Logo} id="logo" alt="Brighthill Games logo" />
             </NavLink>
 
-            <BiX id="close-menu" onClick={toggleMenu} />
+            <BiX id="close-menu" onClick={closeMenu} />
           </nav>
 
           <div>
