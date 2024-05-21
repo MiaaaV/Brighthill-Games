@@ -11,7 +11,7 @@ function Footer() {
 
   return (
     <>
-      <footer className='desktop-footer'>
+      <footer id='desktop-footer' className='desktop-footer'>
         <div className='flex-row flex-between'>
 
           <div className='desktop-contact-info flex-col'>

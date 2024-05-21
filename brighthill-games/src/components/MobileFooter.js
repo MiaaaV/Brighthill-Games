@@ -12,7 +12,7 @@ function MobileFooter() {
 
   return (
     <>
-      <footer className='mobile-footer flex-col flex-align col-12'>
+      <footer id='mobile-footer' className='mobile-footer flex-col flex-align col-12'>
 
         <div className='flex-row flex-between col-11'>
           <img id='mobile-footer-logo' className='col-5' src={Logo} alt='Logo' />

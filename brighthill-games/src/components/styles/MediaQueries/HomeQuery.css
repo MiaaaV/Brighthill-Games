@@ -60,6 +60,8 @@
     padding: 0px;
   }
 
+  /* SWIPER SLIDER */
+
   .swiper {
     width: 100% !important;
   }
@@ -96,4 +98,72 @@
     z-index: 10;
   }
 
+  /* OUR GAMES */
+
+  .fp-games {
+    padding: 5vh 0;
+  }
+
+  .fp-games > div {
+    width: 91.66%;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    text-align: center;
+    row-gap: 40px;
+  }
+
+  .fp-games > div > h2 {
+    font-size: 1.75rem;
+  }
+
+  .fp-games a > div {
+    display: flex;
+    gap: 5px;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    justify-content: flex-end;
+  }
+
+  .fp-games-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px !important;
+  }
+
+  /* RECRUIT */
+
+  .fp-div {
+    width: 100% !important;
+  }
+
+  .fp-div h3,
+  .fp-div p {
+    width: 95%;
+    text-align: center;
+  }
+
+  .fp-div p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .fp-positions {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    width: 100%;
+  }
+
+  .fp-positions h1 {
+    font-size: 4rem; /* 64px */
+  }
+
+  .fp-recruit-img {
+    display: none;
+  }
+
+  .fp-div button#btn {
+    margin-top: 10px;
+    font-size: 18px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }

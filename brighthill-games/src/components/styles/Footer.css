@@ -17,7 +17,8 @@
 }
 
 @media (max-width: 768px) {
-    .desktop-footer {
+
+    #desktop-footer {
         display: none;
     }
 }

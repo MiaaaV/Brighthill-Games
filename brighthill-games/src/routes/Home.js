@@ -46,10 +46,10 @@ function Home() {
   ];
 
   const gamesData = [
-    { title: 'Solaris Surge', image: Banner1 },
+    { title: 'Solaris-Surge', image: Banner1 },
     { title: 'Extopia', image: Banner2 },
-    { title: 'Celestial Descent: Age of Dragons', image: Banner3 },
-    { title: 'Dawn of Arcanum', image: Banner4 }
+    { title: 'Celestial-Descent-Age-of-Dragons', image: Banner3 },
+    { title: 'Dawn-of-Arcanum', image: Banner4 }
   ];
 
   const scrollToRecent = () => {
@@ -149,7 +149,7 @@ function Home() {
 
         <div className="fp-games-content grid-2-1 col-8">
           {gamesData.map((game, index) => (
-            <Link to={`/${game.title}`} key={index}>
+            <Link to={`/game/${game.title}`} key={index}>
               <img className="fp-game" src={game.image} alt="Games content" />
             </Link>
           ))}
