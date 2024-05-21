@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import "./styles/Header.css";
+import './styles/MediaQueries/HeaderQuery.css';
 import "./styles/Reusables.css";
 
 function Header() {
