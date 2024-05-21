@@ -9,6 +9,7 @@ import YouTube from "../images/icons/youtube.png";
 import MobileFooter from './MobileFooter';
 import "./styles/Nav.css";
 import "./styles/Reusables.css";
+import "./styles/MediaQueries/NavQuery.css";
 import "../App.css";
 
 function Nav() {
@@ -30,11 +31,10 @@ function Nav() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    if (!menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -87,7 +87,7 @@ function Nav() {
               <img src={Logo} id="logo" alt="Brighthill Games logo" />
             </NavLink>
 
-            <BiX id="close-menu" onClick={toggleMenu} />
+            <BiX id="close-menu" onClick={closeMenu} />
           </nav>
 
           <div>

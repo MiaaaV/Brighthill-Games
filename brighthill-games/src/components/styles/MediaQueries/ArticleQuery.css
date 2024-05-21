@@ -1,0 +1,19 @@
+@media screen and (max-width: 1200px) {
+  .article-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 30px;
+  }
+  .article-info p {
+    order: 2;
+    width: 100%;
+  }
+  #article-img {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+  }
+
+}
