@@ -3,6 +3,10 @@
   src: url("../../assets/fonts/vtks\ desgaste.ttf") format("truetype");
 }
 
+.recent-mobile {
+  display: none;
+}
+
 /* HERO */
 
 .hero {
@@ -71,10 +75,15 @@
 .recent {
   background-color: #000001;
   gap: 50px;
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
-.dasd {
+.recent > div {
+  align-items: stretch;
+  gap: 50px;
+}
+
+.recent > div div {
   gap: 10px;
 }
 
@@ -92,7 +101,7 @@
 
 .recent p {
   text-align: justify;
-  padding: 10px 10px;
+  line-height: 1.5;
 }
 
 /* GAMES */

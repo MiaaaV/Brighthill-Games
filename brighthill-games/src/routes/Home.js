@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaArrowRight } from "react-icons/fa";
 import { animateScroll } from "react-scroll";
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import BackToTopButton from "../components/TopBtn";
+import careersData from '../components/CareersData';
+import MobileFooter from '../components/MobileFooter';
 import News1 from '../images/news/news1.png';
 import News2 from '../images/news/news2.png';
 import News3 from '../images/news/news3.png';
@@ -14,11 +18,12 @@ import Banner3 from '../images/games/CD/CD_card.png';
 import Banner4 from '../images/games/DoA/DoA_card.png';
 import Recruit from '../images/backgrounds/fp-recruit.png';
 import "../components/styles/Home.css";
+import "../components/styles/MediaQueries/HomeQuery.css";
 import "../components/styles/Reusables.css";
-import "../App.css";
 import "../assets/fonts/fonts.css";
-import careersData from '../components/CareersData'; // Import the careers data
-import MobileFooter from '../components/MobileFooter';
+import "../App.css";
+import "swiper/css";
+import 'swiper/css/pagination';
 
 function Home() {
 
@@ -83,19 +88,51 @@ function Home() {
         <FaAngleDown onClick={scrollToRecent} id="arrow-btn" />
       </div>
 
-      <div id='recent' className="recent flex-center flex-row flex-align">
-        {newsData.map((news, index) => (
-          <div className="dasd flex-col col-2" key={index}>
-            <Link id="recent-link" to={news.link}>
-              <img src={news.image} alt="News content" />
-            </Link>
+      <div id='recent' className='recent recent-desktop flex-col col-12 flex-align'>
+        <h1 className='uppercase col-8'>Recent news and articles</h1>
 
-            <div className="flex-col flex-align">
-              <h2>{news.title}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div className="flex-center flex-row flex-align col-8">
+          {newsData.map((news, index) => (
+            <div className="flex-col" key={index}>
+              <Link id="recent-link" to={news.link}>
+                <img src={news.image} alt="News content" />
+              </Link>
+
+              <div className="das flex-col flex-align col-12">
+                <h2 className='uppercase font-4'>{news.title}</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+
+      <div id='recent' className='recent recent-mobile flex-col col-12 flex-align'>
+        <h1 className='uppercase col-10'>Recent news and articles</h1>
+
+        <div className="flex-center flex-row flex-align col-12">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={0}
+            pagination={{ clickable: true }}
+            modules={[Pagination]}>
+
+            {newsData.map((news, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex-col col-2">
+                  <Link id="recent-link" to={news.link}>
+                    <img src={news.image} alt="News content" />
+                  </Link>
+
+                  <div className="flex-col flex-align">
+                    <h2 className='uppercase font-3'>{news.title}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
       <div className="fp-games flex-col flex-center flex-align">
