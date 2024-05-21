@@ -9,6 +9,7 @@ import YouTube from "../images/icons/youtube.png";
 import MobileFooter from './MobileFooter';
 import "./styles/Nav.css";
 import "./styles/Reusables.css";
+import "./styles/MediaQueries/NavQuery.css";
 import "../App.css";
 
 function Nav() {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import Header from "../components/Header";
@@ -9,11 +10,11 @@ import Twitter from "../images/icons/twitter.png";
 import Instagram from "../images/icons/instagram.png";
 import Facebook from "../images/icons/facebook.png";
 import YouTube from "../images/icons/youtube.png";
-import { FaArrowLeft } from "react-icons/fa";
 import '../components/styles/Game.css';
 import '../components/styles/Reusables.css';
 import "../components/styles/Article.css";
 import "../components/styles/Reusables.css";
+import "../components/styles/MediaQueries/ArticleQuery.css";
 
 function Article() {
 
