@@ -129,6 +129,16 @@
     gap: 20px !important;
   }
 
+  /* SUBSCRIBE */
+
+  .fp-subscribe > div {
+    width: 83.33%;
+  }
+
+  .fp-subscribe p {
+    font-size: 0.9rem;
+  }
+
   /* RECRUIT */
 
   .fp-div {
@@ -165,5 +175,11 @@
     font-size: 18px;
     padding-left: 35px;
     padding-right: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .fp-subscribe form {
+    flex-direction: column;
   }
 }

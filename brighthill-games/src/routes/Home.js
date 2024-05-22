@@ -63,6 +63,15 @@ function Home() {
     });
   };
 
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    setEmail('');
+    setMessage('Thank you for subscribing!');
+  };
+
   const openPositions = careersData.length;
   const officesAmount = 2;
 
@@ -154,6 +163,31 @@ function Home() {
             </Link>
           ))}
         </div>
+      </div>
+
+      <div className='fp-subscribe flex-col flex-align'>
+        <div className='flex-col col-8'>
+          <div className='flex-col'>
+            <h2 className='black'>Subscribe to our newsletter and stay up to date!</h2>
+            <p className='black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <form className='sub-form flex-row' onSubmit={handleSubscribe}>
+            <div>
+              <input
+                type='email'
+                className='form-control'
+                id='email'
+                placeholder='Enter your email address'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <button type='submit' id='btn-sm'>Subscribe</button>
+          </form>
+          {message && <p className='text-align black'>{message}</p>}
+        </div >
       </div>
 
       <div className="fp-recruit flex-row flex-between col-12">

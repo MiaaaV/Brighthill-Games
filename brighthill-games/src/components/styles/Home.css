@@ -141,6 +141,34 @@
   text-decoration: underline;
 }
 
+/* SUBSCRIBE */
+
+.fp-subscribe {
+  padding: 50px 0;
+  background-color: rgba(188, 234, 255, 0.315);
+}
+
+.fp-subscribe > div {
+  gap: 30px;
+}
+
+.fp-subscribe > div > div {
+  gap: 10px;
+}
+
+.sub-form {
+  gap: 20px;
+}
+
+.sub-form input{
+  padding: 15px 50px;
+  border-radius: 5px;
+}
+
+.fp-subscribe button#btn-sm {
+  margin-top: 0;
+}
+
 /* RECRUIT */
 
 .fp-recruit {
