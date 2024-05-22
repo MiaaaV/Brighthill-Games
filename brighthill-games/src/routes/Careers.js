@@ -10,6 +10,7 @@ import Helsinki from '../images/careers/Helsinki.png';
 import Arrow from '../images/icons/arrow.png';
 import { Link } from 'react-router-dom';
 import BackToTopButton from "../components/TopBtn";
+import MobileFooter from '../components/MobileFooter';
 
 function Careers() {
 
@@ -175,7 +176,9 @@ function Careers() {
           ))}
         </div>
       </div>
+
       <Footer />
+      <MobileFooter />
     </>
   )
 }
