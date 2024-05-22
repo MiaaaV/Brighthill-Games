@@ -15,6 +15,7 @@ import DoA from '../images/games/DoA/DoA.png';
 import PoT from '../images/games/PoT/PoT.png';
 import ADS from '../images/games/ADS.png';
 import BackToTopButton from "../components/TopBtn";
+import MobileFooter from '../components/MobileFooter';
 
 function Games() {
 
@@ -80,10 +81,12 @@ function Games() {
         </div>
       </div>
 
-      <div className="flex">
-        <img src={ADS} alt="AD banner" className="w100" />
+      <div className="ad-container flex">
+        <img src={ADS} alt="AD banner" className="ad-image col-12" />
       </div>
+      
       <Footer />
+      <MobileFooter />
     </>
   )
 }

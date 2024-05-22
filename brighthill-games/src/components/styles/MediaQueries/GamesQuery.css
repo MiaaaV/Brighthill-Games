@@ -62,6 +62,10 @@
       padding: 10px 30px;
       font-size: 16px;
   }
+  .ad-image {
+      height: 200px;
+      width: auto;
+  }
 
   /*------ ALL GAMES CSS ------*/
 

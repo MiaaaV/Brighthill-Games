@@ -107,3 +107,12 @@
 .all-games-image-container:hover .all-games-overlay span {
     opacity: 1;
 }
+
+.ad-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.ad-image {
+    display: block;
+}

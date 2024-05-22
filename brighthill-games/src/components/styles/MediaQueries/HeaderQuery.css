@@ -1,4 +1,5 @@
 @media screen and (max-width: 768px) {
+
   .header-background {
     height: 16vh;
     padding-bottom: 54px;
@@ -10,8 +11,10 @@
     white-space: normal;
     word-wrap: break-word;
   }
+
 }
 @media screen and (max-width: 576px) {
+
   .header-background {
     height: 14vh;
     padding-bottom: 46px;
@@ -19,8 +22,10 @@
   .header-heading {
     font-size: 2.4rem;
   }
+
 }
 @media screen and (max-width: 496px) {
+
   .header-background {
     height: 12vh;
     padding-bottom: 40px;
@@ -28,8 +33,10 @@
   .header-heading {
     font-size: 2.2rem;
   }
+
 }
 @media screen and (max-width: 446px) {
+
   .header-background {
     height: 10vh;
     padding-bottom: 30px;
@@ -37,9 +44,12 @@
   .header-heading {
     font-size: 2.2rem;
   }
+
 }
 @media screen and (max-width: 426px) {
+
   .header-heading {
     font-size: 1.85rem;
   }
+  
 }
