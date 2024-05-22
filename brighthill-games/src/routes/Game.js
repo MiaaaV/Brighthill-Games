@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import { FaAngleDown } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import gameData from "../components/GameData";
-import '../components/styles/Game.css';
-import '../components/styles/Reusables.css';
 import Rarr from '../images/icons/rarr.png';
 import Modal from '../components/VideoModal';
-import { FaAngleDown } from "react-icons/fa";
 import BackToTopButton from "../components/TopBtn";
+import MobileFooter from "../components/MobileFooter";
+import '../components/styles/Game.css';
+import '../components/styles/Reusables.css';
+import '../components/styles/MediaQueries/GameQuery.css';
 
 function Game() {
 
@@ -169,6 +171,8 @@ function Game() {
       </div >
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+      <MobileFooter />
       <Footer />
     </>
   )

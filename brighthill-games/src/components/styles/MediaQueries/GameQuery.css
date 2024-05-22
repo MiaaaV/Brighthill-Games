@@ -1,0 +1,81 @@
+@media (max-width: 1250px) {
+
+  .grid-container {
+    width: 83.33%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .grid-container {
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+    row-gap: 80px;
+  }
+
+  .grid-item:nth-last-child(2),
+  .grid-item:last-child {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .main-game-div {
+    background-position: center;
+  }
+
+  .grid-container {
+    margin-top: 5vh;
+    row-gap: 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-container > div {
+    gap: 20px;
+  }
+
+  .grid-container > div:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .grid-container > div:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .game-img-div {
+    height: 200px;
+  }
+
+  /* OVERVIEW */
+
+  .grid-item:last-child {
+    margin-top: 0px;
+  }
+
+  .accordion-content {
+    padding: 20px 10px;
+  }
+
+  /* SIMILAR GAMES */
+
+  .similar-games-container > div,
+  .similar-games-container > div:nth-child(2) {
+    width: 83.33%;
+  }
+
+  .link-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+  }
+
+  #all-games-link {
+    grid-column: 1 / span 2;
+    font-size: 0.9rem;
+    display: flex;
+    justify-self: center;
+  }
+
+}
