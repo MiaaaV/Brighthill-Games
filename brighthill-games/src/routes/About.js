@@ -2,14 +2,16 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import "../components/styles/About.css";
-import "../components/styles/Reusables.css";
 import Helsinki from '../images/about/Helsinki_radius.png';
 import John from '../images/about/John.jpg'
 import William from '../images/about/William.jpg'
 import Jenny from '../images/about/Jenny.jpg'
 import Daniel from '../images/about/Daniel.jpg'
 import BackToTopButton from "../components/TopBtn";
+import "../components/styles/About.css";
+import "../components/styles/Reusables.css";
+import "../components/styles/MediaQueries/AboutQuery.css";
+import MobileFooter from "../components/MobileFooter";
 
 function About() {
 
@@ -68,7 +70,7 @@ function About() {
         <div className="flex-col flex-align flex-center col-12">
           <h2 className="heading-2 uppercase black">Meet our bright team</h2>
 
-          <div className="team-map grid-auto-minmax-250-1 col-8">
+          <div className="grid-4-1 team-map col-8">
             {teamMembers.map((member, index) => (
               <div className="w100 flex-col" key={index}>
                 <div className="team-img-container flex-col flex-align">
@@ -94,9 +96,9 @@ function About() {
             </Link>
           </div>
         </div>
-
       </div>
 
+      <MobileFooter />
       <Footer />
     </>
   )

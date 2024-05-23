@@ -1,0 +1,98 @@
+@media (max-width: 1080px) {
+  .team-map {
+    width: 83.33%;
+  }
+
+  .recruit-info {
+    width: 83.33%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* HERO */
+
+  .about-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
+
+  .about-container > div {
+    flex-direction: column;
+    width: 83.33%;
+  }
+
+  .about-hero-content {
+    width: 100%;
+    text-align: justify;
+    gap: 20px !important;
+  }
+
+  .about-container img {
+    display: none;
+  }
+
+  /* VALUES */
+
+  .values-container {
+    padding: 50px 0;
+    background-color: green;
+  }
+
+  .values-grid {
+    width: 83.33%;
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .splash {
+    width: 150px;
+    height: 120px;
+  }
+
+  /* TEAM MEMBERS */
+
+  .team-container h2 {
+    text-align: center;
+  }
+
+  .team-map {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .team-map > div {
+    width: 83.33% !important;
+    justify-self: center;
+  }
+
+  /* RECRUIT */
+
+  .recruit-container {
+    background-image: none;
+    padding: 50px 0;
+  }
+
+  .recruit-info {
+    gap: 50px;
+  }
+
+  .recruit-info h2 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .recruit-info > div {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .recruit-info > div p {
+    width: 100%;
+    text-align: justify;
+    line-height: 1.5;
+  }
+}
