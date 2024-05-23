@@ -6,7 +6,7 @@ import '../components/styles/Games.css';
 import '../components/styles/MediaQueries/GamesQuery.css'
 import '../App.css';
 import Star from '../images/icons/star.png';
-import Character from '../images/games/char2.png';
+import Character from '../images/games/games-char.png';
 import EOD from '../images/games/EoD/EOD.png';
 import CD from '../images/games/CD/CD.png';
 import Extopia from '../images/games/Extopia/Extopia.png';

@@ -5,7 +5,7 @@ import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import careersData from "../components/CareersData";
-import JobChar from '../images/jobinfo/jobinfoChar.png';
+import JobChar from '../images/jobinfo/jobinfo-char.png';
 import Forms from '../components/Forms/Forms';
 import '../components/styles/JobInfo.css';
 import '../components/styles/MediaQueries/JobInfoQuery.css';
