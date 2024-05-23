@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-import '../components/styles/Games.css';
-import '../components/styles/MediaQueries/GamesQuery.css'
-import '../App.css';
 import Star from '../images/icons/star.png';
 import Character from '../images/games/games-char.png';
 import EOD from '../images/games/EoD/EOD.png';
@@ -16,6 +13,9 @@ import PoT from '../images/games/PoT/PoT.png';
 import ADS from '../images/games/ADS.png';
 import BackToTopButton from "../components/TopBtn";
 import MobileFooter from '../components/MobileFooter';
+import '../components/styles/Games.css';
+import '../components/styles/MediaQueries/GamesQuery.css'
+import '../App.css';
 
 function Games() {
 
@@ -86,7 +86,7 @@ function Games() {
       <div className="ad-container flex">
         <img src={ADS} alt="AD banner" className="ad-image col-12" />
       </div>
-      
+
       <Footer />
       <MobileFooter />
     </>

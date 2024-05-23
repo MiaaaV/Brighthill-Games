@@ -1,0 +1,123 @@
+@media screen and (max-width: 1293px) {
+  .careers-hero {
+      padding: 6vh 14vw;
+  }
+  .careers-character-img {
+      display: none;
+  }
+  .careers-text-container {
+      margin-left: 0;
+  }
+
+  /*------ FAQ ------*/
+  
+  .careers-accordion-btn div {
+      text-align: left;
+  }
+}
+
+@media screen and (max-width: 1124px) {
+  .careers-helsinki-container {
+      flex-direction: column;
+  }
+  
+}
+@media screen and (max-width: 1024px) {
+  .careers-jobs {
+      padding: 8vh 2vw
+  }
+  .careers-jobs-open h2 {
+      font-size: 1.8rem;
+  }
+  .careers-titles-list-container button {
+      padding: 2vh 4vh;
+      font-size: 1rem;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .careers-jobs {
+      padding: 6vh 2vw;
+  }
+  .careers-jobs-open h2 {
+      font-size: 1.6rem;
+  }
+  .careers-titles-list {
+      gap: 10px;
+  }
+  .careers-titles-list-container button {
+      padding: 1.5vh 3vh;
+      font-size: 1rem;
+  }
+
+  /*------ HELSINKI ------*/
+
+  .careers-lorem-text h2 {
+      font-size: 1.8rem;
+  }
+  
+  /*------ FAQ ------*/
+
+  .careers-faq-container {
+      padding: 4vh 1vh 6vh 1vh;
+  }
+  .careers-faq-container h2 {
+      font-size: 1.8rem;
+  }
+  .careers-faq-list {
+      padding: 0vh 5vh 0vh 5vh;
+      margin-top: 30px;
+  }
+  .careers-accordion-btn {
+      padding: 2vh 1vh 2vh 1vh;
+  }
+  .careers-accordion-btn h3 {
+      font-size: 1.2rem;
+  }
+  .careers-accordion-content {
+      padding: 20px 10px;
+  }
+  .careers-accordion-content p {
+      font-size: 1.2rem;
+  }
+  .careers-arrow-icon {
+      width: 20px;
+      margin-right: 0;
+      align-self: flex-start;
+      border: 3px solid #1f1f1fd7;
+  }
+}
+@media screen and (max-width: 626px) {
+  .careers-jobs {
+      padding: 4vh 1vw;
+  }
+  .careers-jobs-open h2 {
+      font-size: 1.4rem;
+  }
+  .careers-jobs-titles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .careers-titles-list {
+      flex-direction: column;
+  }
+  .careers-titles-list-container {
+      width: 100%;
+  }
+  .careers-titles-list-container button {
+      width: 100%;
+      padding: 2vh 10vh;
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .careers-jobs {
+      padding: 4vh 1vw;
+  }
+  .careers-titles-list-container button {
+      padding: 2vh 8vh;
+      font-size: 0.8rem;
+  }
+}

@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import Header from "../components/Header";
 import newsData from "../components/NewsData";
+import MobileFooter from "../components/MobileFooter";
 import Twitter from "../images/icons/twitter.png";
 import Instagram from "../images/icons/instagram.png";
 import Facebook from "../images/icons/facebook.png";
@@ -15,7 +16,6 @@ import '../components/styles/Reusables.css';
 import "../components/styles/Article.css";
 import "../components/styles/Reusables.css";
 import "../components/styles/MediaQueries/ArticleQuery.css";
-import MobileFooter from "../components/MobileFooter";
 
 function Article() {
 
