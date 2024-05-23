@@ -1,16 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import Header from '../components/Header';
-import '../components/styles/Careers.css';
-import Masterchef from '../images/careers/Masterchef.png';
-import careersData from '../components/CareersData';
-import faqData from '../components/FAQData';
-import Helsinki from '../images/careers/Helsinki.png';
-import Arrow from '../images/icons/arrow.png';
-import { Link } from 'react-router-dom';
 import BackToTopButton from "../components/TopBtn";
 import MobileFooter from '../components/MobileFooter';
+import careersData from '../components/CareersData';
+import faqData from '../components/FAQData';
+import Masterchef from '../images/careers/Masterchef.png';
+import Helsinki from '../images/careers/Helsinki.png';
+import Arrow from '../images/icons/arrow.png';
+import '../components/styles/Careers.css';
+import '../components/styles/Reusables.css';
+import '../components/styles/MediaQueries/CareersQuery.css';
 
 function Careers() {
 
@@ -162,10 +164,10 @@ function Careers() {
               <button className="careers-accordion-btn" onClick={() => toggleAccordion(index)}>
                 <div>
                   <h3>{item.question}</h3>
-                    <img className={`careers-arrow-icon ${openIndex === index ? 'rotate-icon' : ''}`}
-                      src={Arrow}
-                      alt="Arrow icon" 
-                    />
+                  <img className={`careers-arrow-icon ${openIndex === index ? 'rotate-icon' : ''}`}
+                    src={Arrow}
+                    alt="Arrow icon"
+                  />
                 </div>
               </button>
 

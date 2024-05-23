@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import BackToTopButton from "../components/TopBtn";
+import MobileFooter from "../components/MobileFooter";
 import Helsinki from '../images/about/Helsinki_radius.png';
 import John from '../images/about/John.jpg'
 import William from '../images/about/William.jpg'
 import Jenny from '../images/about/Jenny.jpg'
 import Daniel from '../images/about/Daniel.jpg'
-import BackToTopButton from "../components/TopBtn";
 import "../components/styles/About.css";
 import "../components/styles/Reusables.css";
 import "../components/styles/MediaQueries/AboutQuery.css";
-import MobileFooter from "../components/MobileFooter";
 
 function About() {
 
