@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaCheck, FaTimes } from "react-icons/fa";
 import ValidateForm from './FormValidation';
 import "./Forms.css";
+import '../styles/MediaQueries/FormsQuery.css';
 import "../styles/Reusables.css";
 
 function Forms({ formData, handleChange, handleFileChange }) {
@@ -25,7 +26,7 @@ function Forms({ formData, handleChange, handleFileChange }) {
   // name, phone, email layout here
   const renderInput = (id, type, placeholder, value, setter, error) => (
     <div className='flex-col'>
-      <label htmlFor={id} className='font-2'>
+      <label htmlFor={id} className='forms-label font-2'>
         {placeholder} <span id='star'>*</span>
       </label>
       <div className='input-with-icon flex'>
@@ -68,7 +69,7 @@ function Forms({ formData, handleChange, handleFileChange }) {
           {renderInput('phone', 'tel', 'Phone', phone, setPhone, errors.phone)}
           {renderInput('email', 'email', 'Email', email, setEmail, errors.email)}
 
-          <label className='font-2 flex-col col-8'>
+          <label className='forms-label font-2 flex-col col-8'>
             <p>CV (.pdf, .doc, .docx)</p>
             <div className='flex'>
               <input
@@ -80,7 +81,7 @@ function Forms({ formData, handleChange, handleFileChange }) {
             </div>
           </label>
 
-          <label className='font-2 flex-col col-8'>
+          <label className='forms-label font-2 flex-col col-8'>
             <p> Application letter (.pdf, .doc, .docx)</p>
             <div className='flex'>
               <input
@@ -92,7 +93,7 @@ function Forms({ formData, handleChange, handleFileChange }) {
             </div>
           </label>
 
-          <label className='font-2 flex-col'>
+          <label className='forms-label font-2 flex-col'>
             <p>Link to portfolio or other site</p>
             <div className="input-with-icon flex">
               <input
@@ -108,7 +109,7 @@ function Forms({ formData, handleChange, handleFileChange }) {
             </div>
           </label>
 
-          <label className='font-2 flex-col'>
+          <label className='forms-label font-2 flex-col'>
             <p>Where did you hear about this position?</p>
             <div className='flex'>
               <input

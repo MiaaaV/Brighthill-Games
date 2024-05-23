@@ -8,6 +8,7 @@ import careersData from "../components/CareersData";
 import JobChar from '../images/jobinfo/jobinfoChar.png';
 import Forms from '../components/Forms/Forms';
 import '../components/styles/JobInfo.css';
+import '../components/styles/MediaQueries/JobInfoQuery.css';
 import '../components/styles/Reusables.css';
 import BackToTopButton from "../components/TopBtn";
 
@@ -62,12 +63,12 @@ function JobInfo() {
 
                     <Link id="job-info-link" to="/careers">
                         <div className="flex-row col-12">
-                            <FaArrowLeft className="font-2" />
+                            <FaArrowLeft className="job-info-arrow font-2" />
                             <p className="uppercase font-2">back to careers</p>
                         </div>
                     </Link>
-
-                    <div className="flex-col col-11">
+ 
+                    <div className="job-info-lorem flex-col col-11">
                         <p className="font-2">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
@@ -109,7 +110,7 @@ function JobInfo() {
                         <h2>Interested? Apply below!</h2>
                     </div>
 
-                    <div className="col-9">
+                    <div className="job-info-forms col-9">
                         <Forms
                             formData={formData}
                             handleChange={handleChange}

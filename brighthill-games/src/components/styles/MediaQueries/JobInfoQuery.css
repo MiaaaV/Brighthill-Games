@@ -1,0 +1,71 @@
+@media screen and (max-width: 1100px) {
+
+  .job-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-info-char-container {
+    display: none;
+  }
+  .job-info-content {
+    width: 66.66%;
+  }
+  .job-info-forms {
+    width: 66.66%;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  
+  .job-info-content {
+    width: 83.33%;
+    background-color: #81818100;
+  }
+  .job-info-forms {
+    width: 83.33%;
+  }
+
+}
+@media screen and (max-width: 576px) {
+
+  .job-info-content > div {
+    gap: 65px;
+  }
+
+  #job-info-link div {
+    gap: 12px;
+  }
+
+  .job-info-arrow,
+  #job-info-link > div p {
+    font-size: 1rem;
+  }
+
+  .job-info-lorem p {
+    font-size: 1rem;
+  }
+  .job-info-lorem h2 {
+    font-size: 1.375rem;
+  }
+
+  .job-info-grid {
+    row-gap: 30px;
+  }
+
+  #responsibilities h2{
+    font-size: 1.375rem;
+  }
+  #responsibilities li {
+    font-size: 1rem;
+  }
+  #qualifications h2{
+    font-size: 1.375rem;
+  }
+  #qualifications li {
+    font-size: 1rem;
+  }
+  .job-info-forms {
+    width: 91.66%;
+  }
+
+}
