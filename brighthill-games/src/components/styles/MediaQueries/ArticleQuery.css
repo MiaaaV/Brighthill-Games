@@ -1,4 +1,5 @@
 @media screen and (max-width: 1200px) {
+
   .article-info {
     display: flex;
     flex-direction: column;
@@ -6,14 +7,51 @@
     height: auto;
     gap: 30px;
   }
+
   .article-info p {
     order: 2;
     width: 100%;
+    line-height: 1.5;
   }
+
   #article-img {
     grid-area: image;
     width: 100%;
     height: auto;
   }
 
+}
+@media screen and (max-width: 768px) {
+
+  .article-container {
+    padding: 60px 0;
+  }
+
+  .article-container p,
+  .article-info p {
+    line-height: 1.6;
+  }
+
+  .article-container-width {
+    width: 75%;
+  }
+
+  .article-text {
+    font-size: 1.1rem;
+  }
+
+}
+@media screen and (max-width: 528px) {
+
+  .article-text {
+    font-size: 1rem;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+
+  .article-text {
+    font-size: 0.9rem;
+  }
+  
 }

@@ -29,7 +29,7 @@ function Article() {
       <Header />
 
       <div className="article-container flex-center">
-        <div className="flex-col col-8">
+        <div className="article-container-width flex-col col-8">
 
           <Link to="/news">
             <div id="back-to-news" className="flex-row">
@@ -40,12 +40,12 @@ function Article() {
 
           <div className="grid-1-2 col-12">
             <div className="article-info grid-2-1">
-              <p className="font-2 col-11">{news.text1}</p>
+              <p className="article-text font-2 col-11">{news.text1}</p>
 
               <img id="article-img" src={news.image} alt="news image" />
             </div>
 
-            <p className="font-2">{news.text2}</p>
+            <p className="article-text font-2">{news.text2}</p>
           </div>
 
           <div className="flex-row flex-between">
