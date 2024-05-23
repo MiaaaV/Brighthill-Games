@@ -16,6 +16,10 @@
     gap: 10px;
 }
 
+#star-list {
+    list-style: none;
+}
+
 .star-icon {
     height: 20px;
     width: 20px;

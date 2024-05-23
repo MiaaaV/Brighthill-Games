@@ -36,9 +36,11 @@ function Games() {
       <div className="games-hero-content flex-align flex-center">
 
         <div className="text-align flex-col col-5">
-          <ul className="flex-row flex-center">
-            {[...Array(4)].map((_) => (
-              <img src={Star} alt="Star icon" className="star-icon" />
+          <ul id="star-list" className="flex-row flex-center">
+            {[...Array(4)].map((_, index) => (
+              <li key={index}>
+                <img src={Star} alt="Star icon" className="star-icon" />
+              </li>
             ))}
           </ul>
 
