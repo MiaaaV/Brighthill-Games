@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Footer from "../components/Footer";
@@ -18,7 +18,7 @@ import "../components/styles/MediaQueries/ArticleQuery.css";
 
 function Article() {
 
-  const location = useLocation()
+  
 
   let { articleId } = useParams()
   const news = newsData.find(news => news.link === articleId);
@@ -42,7 +42,7 @@ function Article() {
             <div className="article-info grid-2-1">
               <p className="article-text font-2 col-11">{news.text1}</p>
 
-              <img id="article-img" src={news.image} alt="news image" />
+              <img id="article-img" src={news.image} alt="news caption" />
             </div>
 
             <p className="article-text font-2">{news.text2}</p>
