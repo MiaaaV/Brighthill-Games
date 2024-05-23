@@ -33,7 +33,7 @@ function Careers() {
       counts[job.department] = (counts[job.department] || 0) + 1;
     });
     setDepartmentCounts(counts);
-  }, [careersData]);
+  }, []);
 
   const filterJobsByDepartment = (department) => {
     if (activeFilter === department) {
