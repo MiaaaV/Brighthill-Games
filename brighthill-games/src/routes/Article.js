@@ -15,6 +15,7 @@ import '../components/styles/Reusables.css';
 import "../components/styles/Article.css";
 import "../components/styles/Reusables.css";
 import "../components/styles/MediaQueries/ArticleQuery.css";
+import MobileFooter from "../components/MobileFooter";
 
 function Article() {
 
@@ -75,6 +76,8 @@ function Article() {
           </div>
         </div>
       </div>
+
+      <MobileFooter />
       <Footer />
     </>
   )

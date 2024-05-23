@@ -19,6 +19,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
+
     // scrolls to desired #id if Link has one, otherwise scrolls to the top of the page
     if (location.pathname && !location.pathname.includes('/game/:id')) {
       if (location.hash) {

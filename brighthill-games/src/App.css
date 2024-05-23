@@ -6,9 +6,10 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px; /* normal font size*/
+  font-size: 16px; /* normal font size = 1rem*/
   background-color: rgb(143, 143, 143);
   color: #f3f3f3;
+
     /* For Firefox */
     overflow-y: scroll;
     scrollbar-color: #9A7E11 #0A0909;

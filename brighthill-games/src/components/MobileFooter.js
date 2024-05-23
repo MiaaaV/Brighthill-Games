@@ -54,8 +54,8 @@ function MobileFooter() {
           </ul>
         </div>
 
-        <div className='flex-row text-align col-11'>
-          <p>© 2024 Brighthill Games, INC. All rights reserved</p>
+        <div className='flex-row flex-center col-11'>
+          <p className='text-align'>© 2024 Brighthill Games, INC. All rights reserved</p>
         </div>
 
       </footer>

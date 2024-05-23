@@ -1,18 +1,22 @@
 .not-found-container {
   flex: 1;
   height: calc(100vh - 468px);
-  gap: 20px;
   background-color: #2f2f2f;
 }
 
-.not-found-container a {
+.not-found-container > div {
+  gap: 50px;
+}
+
+.not-found-container > div a {
   color: #9A7E11;
 }
 
-.not-found-container a:hover {
+.not-found-container > div a:hover {
   text-decoration: underline;
 }
 
 .go-back-btn {
+  margin-top: 0 !important;
   margin-right: 10px;
 }
