@@ -1,3 +1,41 @@
+@media (max-width: 1030px) {
+
+  /* HERO */
+
+  .hero-content {
+    gap: 30px;
+  }
+
+  .hero-content > div {
+    width: 50%;
+  }
+
+  /* RECENT */
+
+  .recent > div {
+    width: 75%;
+  }
+
+  /* OUR GAMES */
+
+  .fp-games > div {
+    width: 75%;
+  }
+
+}
+
+@media (max-width: 968px) {
+
+  .fp-div {
+    width: 100%;
+  }
+
+  .fp-recruit-img {
+    display: none;
+  }
+
+}
+
 @media (max-width: 768px) {
 
   .recent-desktop {
@@ -140,11 +178,7 @@
   }
 
   /* RECRUIT */
-
-  .fp-div {
-    width: 100% !important;
-  }
-
+  
   .fp-div h3,
   .fp-div p {
     width: 95%;
@@ -164,10 +198,6 @@
 
   .fp-positions h1 {
     font-size: 4rem; /* 64px */
-  }
-
-  .fp-recruit-img {
-    display: none;
   }
 
   .fp-div button#btn {
