@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import "../components/styles/News.css";
-import "../components/styles/Reusables.css";
-import "../App.css";
-import { Link } from "react-router-dom";
 import newsData from "../components/NewsData";
 import BackToTopButton from "../components/TopBtn";
+import "../components/styles/News.css";
+import "../components/styles/Reusables.css";
+import "../components/styles/MediaQueries/NewsQuery.css";
+import "../App.css";
+import MobileFooter from "../components/MobileFooter";
 
 function News() {
 
@@ -21,15 +23,15 @@ function News() {
         {newsData.map((news, index) => (
           <div className="news-card flex-row col-8" key={index}>
 
-            <div className="card-content flex-col col-8 flex-between">
-              <div className="card-title-date">
+            <div className="card-content flex-col flex-between flex-align">
+              <div className="card-title-date col-11">
                 <h2 className="uppercase black">{news.title}</h2>
                 <small className="black">{news.date}</small>
               </div>
 
               <p className="black col-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
 
-              <div>
+              <div className="col-11">
                 <Link to={`/news/article/${encodeURIComponent(news.link)}`}>
                   <button id="btn-sm" className="news-btn">Read now</button>
                 </Link>
@@ -42,6 +44,7 @@ function News() {
         ))}
       </div>
 
+      <MobileFooter />
       <Footer />
     </>
   )
