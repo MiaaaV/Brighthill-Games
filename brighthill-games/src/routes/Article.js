@@ -18,8 +18,6 @@ import "../components/styles/MediaQueries/ArticleQuery.css";
 
 function Article() {
 
-  
-
   let { articleId } = useParams()
   const news = newsData.find(news => news.link === articleId);
 
@@ -29,8 +27,7 @@ function Article() {
       <Header />
 
       <div className="article-container flex-center">
-        <div className="article-container-width flex-col col-8">
-
+        <div className="flex-col col-8">
           <Link to="/news">
             <div id="back-to-news" className="flex-row">
               <FaArrowLeft className="font-2" />
@@ -38,14 +35,16 @@ function Article() {
             </div>
           </Link>
 
-          <div className="grid-1-2 col-12">
-            <div className="article-info grid-2-1">
-              <p className="article-text font-2 col-11">{news.text1}</p>
+          <div className="article-content flex-col col-12">
+            <div className="article-info flex-row">
+              <p className="article-text font-2 col-6">{news.text1}</p>
 
-              <img id="article-img" src={news.image} alt="news caption" />
+              <img id="article-img" className="col-6" src={news.image} alt="news caption" />
             </div>
 
-            <p className="article-text font-2">{news.text2}</p>
+            <div>
+              <p className="article-text font-2">{news.text2}</p>
+            </div>
           </div>
 
           <div className="flex-row flex-between">

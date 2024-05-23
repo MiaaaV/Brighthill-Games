@@ -7,26 +7,27 @@
   gap: 50px;
 }
 
-.article-container > div > div {
-  grid-gap: 40px;
+.article-content {
+  gap: 40px;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .article-info {
   height: 400px;
   overflow: hidden;
   align-items: center;
+  gap: 50px;
 }
 
-.article-container p,
-.article-info p {
-  text-align: justify;
-  line-height: 1.5;
+.article-text {
+  max-height: 100%;
 }
 
 #article-img {
   object-fit: cover;
+  object-position: center;
   max-height: 100%;
-  width: 100%;
 }
 
 #back-to-news {
