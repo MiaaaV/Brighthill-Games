@@ -8,9 +8,17 @@
 
 @media (max-width: 500px) {
 
+  #desktop-news {
+    display: none;
+  }
+
+  #mobile-news {
+    display: flex;
+    gap: 10px;
+  }
+
   .main-news-container {
     padding: 0;
-    gap: 10px;
   }
 
   .news-card {

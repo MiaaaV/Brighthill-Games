@@ -30,3 +30,7 @@
   align-self: center;
   margin-top: 0;
 }
+
+#mobile-news {
+  display: none;
+}
