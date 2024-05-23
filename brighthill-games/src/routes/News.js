@@ -20,51 +20,61 @@ function News() {
       <Header />
 
       <div className="main-news-container flex-center flex-col flex-align">
-        {newsData.map((news, index) => (
-          <div id="desktop-news" className="news-card flex-row col-8" key={index}>
+        {newsData.map((news, index) => {
+          const key = news.id || index;
+          console.log('News Title:', news.title);
+          console.log('Key:', key); // Ensure these keys are unique
+          return (
+            <div key={key} id="desktop-news" className="news-card flex-row col-8" >
 
-            <div className="card-content flex-col flex-between flex-align">
-              <div className="card-title-date col-11">
-                <h2 className="uppercase black">{news.title}</h2>
-                <small className="black">{news.date}</small>
+              <div className="card-content flex-col flex-between flex-align">
+                <div className="card-title-date col-11">
+                  <h2 className="uppercase black">{news.title}</h2>
+                  <small className="black">{news.date}</small>
+                </div>
+
+                <p className="black col-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div className="col-11">
+                  <Link to={`/news/article/${encodeURIComponent(news.link)}`}>
+                    <button id="btn-sm" className="news-btn">Read now</button>
+                  </Link>
+                </div>
               </div>
 
-              <p className="black col-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+              <img className="news-img col-5" src={news.image} alt="News content" />
 
-              <div className="col-11">
-                <Link to={`/news/article/${encodeURIComponent(news.link)}`}>
-                  <button id="btn-sm" className="news-btn">Read now</button>
-                </Link>
-              </div>
             </div>
-
-            <img className="news-img col-5" src={news.image} alt="News content" />
-
-          </div>
-        ))}
+          );
+        })}
 
         {/* MOBILE VIEW  */}
 
         <div id="mobile-news" className="flex-col">
-          {newsData.map((news, index) => (
-            <Link to={`/news/article/${encodeURIComponent(news.link)}`}>
-              <div className="news-card flex-row col-8" key={index}>
+          {newsData.map((news, index) => {
+            const key = news.id || index;
+            console.log('News Title Mobile:', news.title);
+            console.log('Key:', key); // Ensure these keys are unique
+            return (
+              <Link to={`/news/article/${encodeURIComponent(news.link)}`} key={key}>
+                <div className="news-card flex-row col-8">
 
-                <div className="card-content flex-col flex-between flex-align">
-                  <div className="card-title-date col-11">
-                    <h2 className="uppercase black">{news.title}</h2>
-                    <small className="black">{news.date}</small>
+                  <div className="card-content flex-col flex-between flex-align">
+                    <div className="card-title-date col-11">
+                      <h2 className="uppercase black">{news.title}</h2>
+                      <small className="black">{news.date}</small>
+                    </div>
+
+                    <p className="black col-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+
                   </div>
 
-                  <p className="black col-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <img className="news-img col-5" src={news.image} alt="News content" />
 
                 </div>
-
-                <img className="news-img col-5" src={news.image} alt="News content" />
-
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
 
