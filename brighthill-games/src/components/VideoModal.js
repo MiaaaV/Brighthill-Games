@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/VideoModal.css';
+import'./styles/MediaQueries/VideoModalQuery.css';
 
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
