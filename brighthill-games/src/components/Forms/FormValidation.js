@@ -55,7 +55,7 @@ function ValidateForm({ name, phone, email, onValidation }) {
 
   return (
     <>
-      <button id="btn-sm" className="col-4" type="submit" onClick={handleApplyClick}>
+      <button className="btn-sm col-4" type="submit" onClick={handleApplyClick}>
         Apply
       </button>
     </>

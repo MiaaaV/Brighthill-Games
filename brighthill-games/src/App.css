@@ -12,7 +12,7 @@ html {
 
     /* For Firefox */
     overflow-y: scroll;
-    scrollbar-color: #9A7E11 #0A0909;
+    scrollbar-color: #65520B #0A0909;
     scrollbar-width: thin;
 }
 
@@ -23,7 +23,7 @@ a {
 
 a.hover,
 a.active {
-  color: #9A7E11;
+  color: #44390b;
 }
 
 @media (max-width: 768px) {

@@ -91,7 +91,7 @@ function Home() {
           </div>
 
           <Link to="/game/Echoes-of-Desolation">
-            <button id="btn">Enter Brighthill</button>
+            <button id="home-game-btn" className='btn'>Enter Brighthill</button>
           </Link>
         </div>
 
@@ -104,7 +104,7 @@ function Home() {
         <div className="flex-center flex-row flex-align col-8">
           {newsData.map((news, index) => (
             <div className="flex-col" key={index}>
-              <Link id="recent-link" to={news.link}>
+              <Link className="recent-link" to={news.link}>
                 <img src={news.image} alt="News content" />
               </Link>
 
@@ -130,7 +130,7 @@ function Home() {
             {newsData.map((news, index) => (
               <SwiperSlide key={index}>
                 <div className="flex-col col-2">
-                  <Link id="recent-link" to={news.link}>
+                  <Link className="recent-link" to={news.link}>
                     <img src={news.image} alt="News content" />
                   </Link>
 
@@ -185,7 +185,7 @@ function Home() {
                 required
               />
             </div>
-            <button type='submit' id='btn-sm'>Subscribe</button>
+            <button type='submit' className='btn-sm'>Subscribe</button>
           </form>
           {message && <p className='text-align black'>{message}</p>}
         </div >
@@ -212,7 +212,7 @@ function Home() {
 
           <div>
             <Link to="/careers#explore">
-              <button id="btn">explore positions</button>
+              <button className="btn">explore positions</button>
             </Link>
           </div>
         </div>

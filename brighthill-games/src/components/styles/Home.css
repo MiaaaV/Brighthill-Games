@@ -81,12 +81,12 @@
   gap: 10px;
 }
 
-#recent-link {
+.recent-link {
   overflow: hidden;
   height: 30vh;
 }
 
-#recent-link img {
+.recent-link img {
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -159,7 +159,7 @@
   border-radius: 5px;
 }
 
-.fp-subscribe button#btn-sm {
+.fp-subscribe button.btn-sm {
   margin-top: 0;
 }
 

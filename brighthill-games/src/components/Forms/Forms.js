@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaCheck, FaTimes } from "react-icons/fa";
 import ValidateForm from './FormValidation';
 import "./Forms.css";
-import '../styles/MediaQueries/FormsQuery.css';
+import './FormsQuery.css';
 import "../styles/Reusables.css";
 
 function Forms({ formData, handleChange, handleFileChange }) {

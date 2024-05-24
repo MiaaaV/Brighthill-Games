@@ -72,7 +72,7 @@
     font-size: 1.125rem;
   }
 
-  .hero button#btn {
+  .hero button.btn {
     font-size: 18px;
     padding: 15px 60px;
   }
@@ -204,7 +204,7 @@
     font-size: 4rem; /* 64px */
   }
 
-  .fp-div button#btn {
+  .fp-div button.btn {
     margin-top: 10px;
     font-size: 18px;
     padding-left: 35px;

@@ -57,7 +57,7 @@ function Game() {
               <p className="grid-text">{game.description2}</p>
 
               {game.id === "Echoes-of-Desolation" && (
-                <button id="btn-sm" onClick={() => setIsModalOpen(true)}>
+                <button className="btn-sm" onClick={() => setIsModalOpen(true)}>
                   Watch Trailer
                 </button>
               )}

@@ -28,7 +28,7 @@
   border: 3px solid #00776186;
 }
 
-form #btn-sm {
+form .btn-sm {
   margin-top: 40px;
   align-self: center;
 }

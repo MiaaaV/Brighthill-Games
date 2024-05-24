@@ -27,7 +27,7 @@ function NotFound() {
         <div className="flex-col flex-align">
           <h1>Sorry, the page you were looking for was not found.</h1>
           <h2>
-            <button id="btn-sm" className="go-back-btn" onClick={goBack}><FaArrowLeft /> Go back</button>&nbsp;&nbsp; OR &nbsp;&nbsp;<Link to="/">return home</Link>
+            <button className="go-back-btn btn-sm" onClick={goBack}><FaArrowLeft /> Go back</button>&nbsp;&nbsp; OR &nbsp;&nbsp;<Link to="/">return home</Link>
           </h2>
         </div>
       </div>

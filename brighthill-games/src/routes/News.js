@@ -37,7 +37,7 @@ function News() {
 
                 <div className="col-11">
                   <Link to={`/news/article/${encodeURIComponent(news.link)}`}>
-                    <button id="btn-sm" className="news-btn">Read now</button>
+                    <button className="news-btn btn-sm">Read now</button>
                   </Link>
                 </div>
               </div>

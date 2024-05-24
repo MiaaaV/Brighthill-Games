@@ -1,5 +1,5 @@
 /* COLOURS
-primary = '#9A7E11';
+primary = '#9A7E11 #65520B';
 secondary = '#23404D';
 white = '#F3f3f3';
 black = '#1f1f1f';
@@ -155,8 +155,8 @@ nav = #0A0909;
 
 /* BUTTONS */
 
-#btn {
-  background-color: #9A7E11;
+.btn {
+  background-color: #856D0F;
   font-size: 1.25rem; /* 20px */
   color: #f3f3f3;
   padding: 20px 50px;
@@ -167,9 +167,9 @@ nav = #0A0909;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-#btn-sm {
+.btn-sm {
   margin-top: 20px;
-  background-color: #9A7E11;
+  background-color: #856D0F;
   font-size: 1.125rem; /* 18px */
   color: #f3f3f3;
   padding: 15px 25px;
@@ -180,8 +180,8 @@ nav = #0A0909;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-#btn:hover,
-#btn-sm:hover {
+.btn:hover,
+.btn-sm:hover {
   background-color: #5C4C0E;
   color: #8C8C8C;
   cursor: pointer;

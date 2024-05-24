@@ -92,7 +92,7 @@ function About() {
             <p className="font-2 col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices, purus id vestibulum gravida, lacus sem hendrerit justo, et lobortis risus quam nec elit. Ut sed mi vehicula, eleifend metus et, ultrices tortor.</p>
 
             <Link to="/careers">
-              <button id="btn">work with us</button>
+              <button className="btn">work with us</button>
             </Link>
           </div>
         </div>
