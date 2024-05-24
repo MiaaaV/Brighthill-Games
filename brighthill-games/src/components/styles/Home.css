@@ -33,6 +33,13 @@
   gap: 30px;
 }
 
+#hero-h1 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
 #arrow-btn {
   padding: 10px;
   font-size: 50px;
