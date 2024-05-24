@@ -1,3 +1,11 @@
+@media (max-width: 1290px) {
+  
+  .recent > div {
+    width: 83.33%;
+  }
+
+}
+
 @media (max-width: 1030px) {
 
   /* HERO */
@@ -54,10 +62,6 @@
 
   .hero-content {
     gap: 40px;
-  }
-
-  #hero-h1 {
-    text-align: center;
   }
 
   .hero-content > div {

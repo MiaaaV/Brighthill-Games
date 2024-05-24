@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaArrowRight } from "react-icons/fa";
 import { animateScroll } from "react-scroll";
@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import BackToTopButton from "../components/TopBtn";
 import careersData from '../components/CareersData';
 import MobileFooter from '../components/MobileFooter';
+import HeroText from '../images/fp-hero-heading.png';
 import News1 from '../images/news/news1.png';
 import News2 from '../images/news/news2.png';
 import News3 from '../images/news/news3.png';
@@ -82,7 +83,7 @@ function Home() {
 
       <div className="hero flex-col">
         <div className="hero-content flex-col flex-align col-12">
-          <h1 id="hero-h1">The <span style={{ color: "#796940", fontFamily: "Desgaste" }}>past</span> never sleeps</h1>
+          <img id='hero-h1' src={HeroText} alt='Hero title' />
 
           <div className="flex-col col-4">
             <p className="font-3">Uncover the asylum's chilling past, solve perplexing puzzles, and confront the echoes of lost souls.</p>
@@ -90,7 +91,7 @@ function Home() {
           </div>
 
           <Link to="/game/Echoes-of-Desolation">
-            <button id="btn">Learn more</button>
+            <button id="btn">Enter Brighthill</button>
           </Link>
         </div>
 
@@ -107,7 +108,7 @@ function Home() {
                 <img src={news.image} alt="News content" />
               </Link>
 
-              <div className="das flex-col flex-align col-12">
+              <div className="flex-col flex-align col-12">
                 <h2 className='uppercase font-4'>{news.title}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>

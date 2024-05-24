@@ -1,5 +1,6 @@
 {
   "name": "brighthill-games",
+  "homepage": "https://miav-portfolio.eu/BrighthillGames",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
