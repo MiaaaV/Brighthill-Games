@@ -22,8 +22,7 @@ function News() {
       <div className="main-news-container flex-center flex-col flex-align">
         {newsData.map((news, index) => {
           const key = news.id || index;
-          console.log('News Title:', news.title);
-          console.log('Key:', key); // Ensure these keys are unique
+
           return (
             <div key={key} id="desktop-news" className="news-card flex-row col-8" >
 
@@ -53,8 +52,7 @@ function News() {
         <div id="mobile-news" className="flex-col">
           {newsData.map((news, index) => {
             const key = news.id || index;
-            console.log('News Title Mobile:', news.title);
-            console.log('Key:', key); // Ensure these keys are unique
+
             return (
               <Link to={`/news/article/${encodeURIComponent(news.link)}`} key={key}>
                 <div className="news-card flex-row col-8">

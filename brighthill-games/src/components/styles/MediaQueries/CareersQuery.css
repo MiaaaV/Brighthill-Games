@@ -10,6 +10,17 @@
   }
 
   /*------ FAQ ------*/
+
+  .careers-faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .careers-faq-list {
+    padding: 0;
+    width: 83.33%;
+  }
   
   .careers-accordion-btn div {
       text-align: left;
